@@ -2,8 +2,19 @@
 $icon-font-path:        "../fonts/";
 
 // Grid settings
-$main-sm-columns:       12;
-$sidebar-sm-columns:    4;
+$max-width:             1050px;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         #131313; // black
+$brand-secondary:       #B12915; // red
+$alt-background:        #5B1005; // dark red
+$dark-grey:             #777777;
+$medium-grey:           #9B9B9B;
+$light-grey:            #EFEFEF;
+$white:                 #FFFFFF;
+
+// Breakpoints
+$screen-xs:             500px;
+$screen-sm:             768px;
+$screen-md:             970px;
+$screen-lg:             1440px;

@@ -1,0 +1,14 @@
+$icon-width: 34px;
+$icon-height: 34px;
+$icon-bgcolor: #A6292A;
+
+.social-icon {
+  display: inline-block;
+  background-color: $icon-bgcolor;
+  width: $icon-width;
+  height: $icon-height;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 5px;
+  color: $white;
+}
