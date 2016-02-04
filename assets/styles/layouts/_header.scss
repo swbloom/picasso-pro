@@ -1,0 +1,25 @@
+$header-height: 198px;
+
+.brand {
+  text-decoration: none;
+}
+.banner {
+  height: $header-height;
+  background-color: $brand-primary;
+  background-image: url('../images/topbanner.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.site-logo {
+  text-align: center;
+  img {
+    width: 200px;
+  }
+  &__fallback {
+    @include h1;
+    color: $white;
+  }
+}

@@ -1,0 +1,77 @@
+//
+// Font Sizes
+//
+@mixin fs-larger {
+  font-size: (24px / $base-fontsize) * 1em;
+}
+@mixin fs-large {
+  font-size: (22px / $base-fontsize) * 1em;
+}
+@mixin fs-base {
+  font-size: $base-fontsize * 1em;
+}
+@mixin fs-small {
+  font-size: (14px / $base-fontsize) * 1em;
+}
+
+//
+// Line Heights
+//
+@mixin lh-looser {
+  line-height: (30px / $base-fontsize) * 1em;
+}
+
+@mixin lh-loose {
+  line-height: (26px / $base-fontsize) * 1em;
+}
+
+@mixin lh-base {
+  line-height: (24px / $base-fontsize) * 1em;
+}
+
+@mixin lh-tight {
+  line-height: (21px / $base-fontsize) * 1em;
+}
+
+@mixin lh-tighter {
+  line-height: (19px / $base-fontsize) * 1em;
+}
+
+@mixin lh-tightest {
+  line-height: (14px / $base-fontsize) * 1em;
+}
+
+//
+// Headings
+//
+@mixin h1 {
+  @include fs-larger;
+  @include lh-looser;
+}
+
+@mixin h2 {
+  @include fs-large;
+  @include lh-loose;
+  text-transform: uppercase;
+}
+
+@mixin h3 {
+  @include fs-base;
+  @include lh-tight;
+}
+
+@mixin h4 {
+  @include fs-small;
+  @include lh-tighter;
+  text-transform: uppercase;
+  color: $brand-secondary;
+}
+
+//
+// Body Text
+//
+@mixin p {
+  @include fs-base;
+  @include lh-base;
+}
+

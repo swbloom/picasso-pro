@@ -5,10 +5,23 @@ $icon-bgcolor: #A6292A;
 .social-icon {
   display: inline-block;
   background-color: $icon-bgcolor;
+  background-size: cover;
   width: $icon-width;
   height: $icon-height;
   border-radius: 50%;
   text-align: center;
-  margin: 0 5px;
+  margin: 0 7px;
   color: $white;
+
+  &-facebook {
+    background-image: url(../images/social_facebook.png);
+  }
+
+  &-twitter {
+    background-image: url(../images/social_twitter.png);
+  }
+
+  &-vimeo {
+    background-image: url(../images/social_vimeo.png);
+  }
 }

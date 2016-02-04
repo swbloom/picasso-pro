@@ -75,3 +75,42 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+// Modify page font size for accessibility
+var sizer = {};
+
+sizer.init = function() {
+  if (!$('#sizer').length) return;
+
+  this.el = $('#sizer');
+  this.addEventListeners();
+}
+
+sizer.addEventListeners = function() {
+  var buttons = this.el.find('button');
+
+  $.each(buttons, function(i, button) {
+    $(button).on('click', sizer.getDesiredSize);
+  });
+}
+
+sizer.getDesiredSize = function() {
+  var size = $(this).data('size');
+
+  sizer.setDesiredSize(size);
+
+}
+
+sizer.setDesiredSize = function(size) {
+  var $body = $('body');
+
+  if (typeof(size) !== 'number') return console.error('The size data attribute must be set to a number.');
+
+  $body.css('font-size', size);
+
+}
+
+$(document).ready(function() {
+  sizer.init();
+});
+
