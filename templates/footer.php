@@ -1,13 +1,13 @@
 <?php
   function display_social_media_icons() {
-    $facebook = get_option('facebook') ?
-      "<a href='http://www.facebook.com/" . get_option('facebook') . "'> <span class='social-icon social-icon-facebook'></a></span>"
+    $facebook = get_theme_mod('picassopro_facebook_url') ?
+      "<a href='http://www.facebook.com/" . get_theme_mod('picassopro_facebook_url') . "'> <span class='social-icon social-icon-facebook'></a></span>"
       : null;
-    $twitter = get_option('twitter') ?
-      "<a href='http://www.twitter.com/" . get_option('twitter') . "'> <span class='social-icon social-icon-twitter'></a></span>"
+    $twitter = get_theme_mod('picassopro_twitter_handle') ?
+      "<a href='http://www.twitter.com/" . get_theme_mod('picassopro_twitter_handle') . "'> <span class='social-icon social-icon-twitter'></a></span>"
       : null;;
-    $youtube = get_option('vimeo') ?
-      "<a href='http://www.vimeo.com/" . get_option('vimeo') . "'> <span class='social-icon social-icon-vimeo'></a></span>"
+    $youtube = get_theme_mod('picassopro_vimeo_url') ?
+      "<a href='http://www.vimeo.com/" . get_theme_mod('picassopro_vimeo_url') . "'> <span class='social-icon social-icon-vimeo'></a></span>"
       : null;
 
 ?>

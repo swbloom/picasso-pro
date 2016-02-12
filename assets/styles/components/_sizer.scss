@@ -1,0 +1,36 @@
+$sizer-padding: 0px 10px;
+$sizer-button-padding: 5px;
+
+#sizer {
+  @include p;
+  padding: $sizer-padding;
+  border: 1px solid $white;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.74px;
+
+  button {
+    background: none;
+    color: $white;
+    cursor: pointer;
+    line-height: 0;
+    letter-spacing: 0.95px;
+    padding: $sizer-button-padding;
+    &:hover {
+      color: red;
+    }
+    @include p;
+    border: 0;
+    &:first-child {
+      padding-left: $sizer-button-padding + 2px;
+    }
+    &:nth-child(2) {
+      font-size: 18px;
+    }
+    &:nth-child(3) {
+      font-size: 23px;
+    }
+  }
+}
