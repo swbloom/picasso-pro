@@ -5,6 +5,11 @@ namespace Roots\Sage\Titles;
 /**
  * Page titles
  */
+function filter_archive_title($title) {
+  return str_replace('Archives: ', '', $title);
+}
+add_filter('get_the_archive_title', __NAMESPACE__ . '\\filter_archive_title');
+
 function title() {
   if (is_home()) {
     if (get_option('page_for_posts', true)) {

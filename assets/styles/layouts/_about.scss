@@ -25,6 +25,7 @@ $mission-padding: 50px;
   h2 {
     color: #E33920;
     @include h2;
+    letter-spacing: 2px;
     margin-bottom: 17.5px;
   }
   p {
