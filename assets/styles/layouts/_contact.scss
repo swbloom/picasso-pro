@@ -1,0 +1,17 @@
+.contact-wrapper {
+  display: flex;
+}
+.contact-group {
+  margin: 20px 0;
+  &-header {
+    @include h3;
+    color: $brand-secondary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  &-body {
+    @include p;
+    line-height: 1.3em;
+  }
+}
