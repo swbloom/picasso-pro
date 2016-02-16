@@ -1,0 +1,12 @@
+#breadcrumbs {
+  color: $medium-grey;
+  @include fs-small;
+  font-style: italic;
+  line-height: 1.29em;
+  margin-bottom: 45px;
+
+  a {
+    color: $medium-grey;
+    text-decoration: none;
+  }
+}

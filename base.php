@@ -19,10 +19,10 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap container" role="document">
-    <?php if ( function_exists('yoast_breadcrumb') && !is_front_page()) {
-      yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-    } ?>
       <div class="content row">
+      <?php if ( function_exists('yoast_breadcrumb') && !is_front_page()) {
+        yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+      } ?>
         <main class="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
