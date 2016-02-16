@@ -28,6 +28,6 @@
   </div>
   <div class="contact-image">
     <?php $feature_image = get_field('feature-image') ?>
-    <img src="<?php echo $feature_image['url'] ?>" />
+    <img src="<?php echo $feature_image['url'] ?>" alt="<?php echo $feature_image['alt'] ?>" />
   </div>
 </div>

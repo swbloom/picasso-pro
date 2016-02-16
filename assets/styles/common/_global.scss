@@ -60,10 +60,11 @@ body {
 .content {
   margin: 30px 0;
 }
+
 .page-header {
     @include h2;
     letter-spacing: 2px;
-    margin-bottom: 32px;
+    margin-bottom: 15px;
 }
 
 // Breakpoint Specific Classes
