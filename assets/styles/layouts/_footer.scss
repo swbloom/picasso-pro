@@ -19,6 +19,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     @media screen and (max-width: $screen-sm) {
       flex-direction: column-reverse;
