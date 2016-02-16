@@ -10,12 +10,21 @@
           <h1 class="site-logo__fallback"><?php echo get_bloginfo('name'); ?></h1>
         <?php endif; ?>
        </div>
-    <nav class="nav-primary">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
-    </nav>
   </div>
+  <div class="desktop-hidden">
+    <div class="menubar-mobile">
+      <button id="toggle-nav"><i class="fa fa-bars"></i>
+      <p>Menu</p>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-primary">
+    <?php
+    if (has_nav_menu('primary_navigation')) :
+      wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+    endif;
+    ?>
+  </nav>
+  <?php get_theme_mod('picassopro_searchbar') ? get_search_form() : null ?>
 </header>
+

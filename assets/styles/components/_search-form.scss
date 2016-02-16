@@ -1,0 +1,15 @@
+#search-input {
+  @include p;
+  background: transparent;
+  border: 1px solid $white;
+  height: 37px;
+  letter-spacing: 0.74px;
+  min-width: 194px;
+  color: $white;
+  &::placeholder {
+    color: $white;
+  }
+}
+#search-submit {
+  display: none;
+}

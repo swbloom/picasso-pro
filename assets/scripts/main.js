@@ -87,30 +87,39 @@ sizer.init = function() {
 }
 
 sizer.addEventListeners = function() {
-  var buttons = this.el.find('button');
+  this.buttons = this.el.find('button');
 
-  $.each(buttons, function(i, button) {
-    $(button).on('click', sizer.getDesiredSize);
+  $.each(this.buttons, function(i, button) {
+    $(button).on('click', sizer.setDesiredSize);
   });
 }
 
-sizer.getDesiredSize = function() {
+sizer.setDesiredSize = function(event) {
+  var $button = $(this);
   var size = $(this).data('size');
-
-  sizer.setDesiredSize(size);
-
-}
-
-sizer.setDesiredSize = function(size) {
   var $body = $('body');
+
+  sizer.buttons.removeClass('active');
 
   if (typeof(size) !== 'number') return console.error('The size data attribute must be set to a number.');
 
+  $button.addClass('active');
   $body.css('font-size', size);
 
 }
 
+// Listener to toggle hamburger nav
+var nav = {
+  navButton: $('#toggle-nav'),
+  navMenu: $('#menu-primary-navigation')
+};
+nav.init = function() {
+  nav.navButton.on('click', function(){
+    nav.navMenu.slideToggle();
+  });
+}
+
 $(document).ready(function() {
   sizer.init();
+  nav.init();
 });
-

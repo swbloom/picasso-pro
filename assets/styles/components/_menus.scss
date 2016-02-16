@@ -1,0 +1,81 @@
+.nav-primary {
+  @include h4;
+  background-color: $brand-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu-primary-navigation {
+  $menu-height-desktop: 60px;
+  $menu-item-margin: 0 15px;
+  $keyline-width: 5px;
+
+
+  display: flex;
+  height: $menu-height-desktop;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $screen-sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    display: none;
+  }
+
+  li {
+    height: 100%; // to get keyline to bottom of parent container
+    display: flex;
+    align-items: center;
+    margin: $menu-item-margin;
+    border-bottom: $keyline-width solid $brand-primary;
+
+    @media screen and (max-width: $screen-sm) {
+      margin: 15px 0px;
+      height: auto; // to fix slidedown overflow bug
+    }
+
+    &.active {
+      border-bottom: $keyline-width solid $brand-secondary;
+
+      @media screen and ( max-width: $screen-sm ) {
+        border-bottom: 0px;
+      }
+    }
+  }
+  a {
+    @include fs-small;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+  }
+}
+.menubar-mobile {
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  background-color: $brand-primary;
+  width: 100%;
+  i {
+    @include h1;
+    margin-right: 15px;
+    &:before {
+      position: relative;
+      top: 0.1em; // hack to line the menu text and hamburger properly: ;
+    }
+  }
+  button {
+    @include p;
+    @include lh-tightest;
+    text-transform: uppercase;
+    color: $brand-secondary;
+    background-color: $brand-primary;
+    border: 0;
+    letter-spacing: 2px;
+  }
+  p {
+    display: inline-block;
+  }
+}

@@ -1,18 +1,40 @@
 $header-height: 198px;
+$header-height-sm: 146px;
+$mobilenav-height: 60px;
 
 .brand {
   text-decoration: none;
 }
+
 .banner {
+  position: relative;
   height: $header-height;
   background-color: $brand-primary;
   background-image: url('../images/topbanner.jpg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
+  @media screen and (max-width: $screen-sm) {
+    height: $header-height-sm;
+  }
+  @media screen and (max-width: $screen-xs) {
+    background-image: none;
+  }
 }
+
+header .container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  top: 30%;
+  transform: translateY(-30%);
+
+  @media screen and ( max-width: $screen-sm ) {
+  top: 60%;
+  transform: translateY(-60%);
+  }
+}
+
 .site-logo {
   text-align: center;
   img {
@@ -28,4 +50,29 @@ $header-height: 198px;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#search-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-primary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 45px;
+
+  @media screen and (max-width: $screen-sm) {
+    width: 226px;
+    top: calc(100% + #{$mobilenav-height});
+    bottom: auto;
+  }
+}
+.menubar-mobile {
+  position: absolute;
+  top: 100%;
+  height: $mobilenav-height;
+  text-transform: uppercase;
 }
