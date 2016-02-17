@@ -67,6 +67,12 @@ body {
     margin-bottom: 15px;
 }
 
+.summary {
+  @include p;
+  line-height: 1.5em;
+  letter-spacing: 0.57px;
+}
+
 // Breakpoint Specific Classes
 .desktop-hidden {
   @media screen and (min-width: ($screen-sm + 1px)) {

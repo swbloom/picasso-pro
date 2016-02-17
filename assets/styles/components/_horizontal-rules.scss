@@ -1,0 +1,6 @@
+.rule {
+  color: $brand-primary;
+  &--thick {
+    border: 5px solid $brand-primary;
+  }
+}

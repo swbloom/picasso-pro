@@ -1,12 +1,21 @@
+<?php
+/**
+ * Template Name: Archives
+ */
+?>
+
 <?php get_template_part('templates/page', 'header'); ?>
 <?php
   $resourcesQuery = new WP_QUERY(
     array(
-      'post_type' => 'resources',
+      'post_type' => 'resource',
       'order' => 'ASC'
       )
 ); ?>
-<section class="resources-wrapper">
+<section class="summary archives-summary">
+  <?php the_field('archives-summary'); ?>
+</section>
+<!-- <section class="resources-wrapper">
 <?php if ( $resourcesQuery->have_posts() ) : ?>
   <?php while ( $resourcesQuery->have_posts()) : $resourcesQuery->the_post(); ?>
     <article class="resource" id="<?php echo $post->post_name; ?>">
@@ -22,7 +31,7 @@
   <?php endwhile; ?>
   <?php wp_reset_postdata(); ?>
 <?php endif; ?>
-</section>
+</section> -->
 <!-- <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>
