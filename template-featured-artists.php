@@ -3,7 +3,6 @@
  * Template Name: Featured Artists
  */
 ?>
-
 <?php get_template_part('templates/page', 'header'); ?>
 <?php
   $resourcesQuery = new WP_QUERY(

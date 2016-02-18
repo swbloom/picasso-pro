@@ -6,32 +6,30 @@
 
 <?php get_template_part('templates/page', 'header'); ?>
 <?php
-  $resourcesQuery = new WP_QUERY(
+  $projectsQuery = new WP_QUERY(
     array(
-      'post_type' => 'resource',
+      'post_type' => 'projects',
       'order' => 'ASC'
       )
 ); ?>
 <section class="summary archives-summary">
   <?php the_field('archives-summary'); ?>
 </section>
-<!-- <section class="resources-wrapper">
-<?php if ( $resourcesQuery->have_posts() ) : ?>
-  <?php while ( $resourcesQuery->have_posts()) : $resourcesQuery->the_post(); ?>
-    <article class="resource" id="<?php echo $post->post_name; ?>">
-      <p class="resource-category"><?php the_field('resource-category'); ?></p>
-      <h2><?php the_title(); ?></h2>
-      <p class="resource-dop"><?php the_field('resource-dop'); ?></p>
-      <div class="resource-summary">
-        <?php the_field('resource-summary');  ?>
+<section class="card-wrapper">
+<?php if ( $projectsQuery->have_posts() ) : ?>
+  <?php while ( $projectsQuery->have_posts()) : $projectsQuery->the_post(); ?>
+    <article class="card" id="<?php echo $post->post_name; ?>">
+      <p class="card-category">Projects</p>
+      <h2 class="post-title"><?php the_title(); ?></h2>
+      <p class="card-dop"><?php the_field('project-date'); ?></p>
+      <div class="card-summary">
+        <?php the_field('project-description');  ?>
       </div>
-      <?php $resource = get_field('resource') ?>
-      <a class="resource-download" download="" href="<?php echo $resource['url'] ?>">Download PDF</a>
     </article>
   <?php endwhile; ?>
   <?php wp_reset_postdata(); ?>
 <?php endif; ?>
-</section> -->
+</section>
 <!-- <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>

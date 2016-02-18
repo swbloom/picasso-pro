@@ -2,30 +2,25 @@ $resource-width: 266px;
 $resource-margin: 18px 17px;
 $resource-padding: 25px 20px;
 
-.resources-wrapper {
+.card-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-.resource {
-  width: $resource-width;
+.card {
   background-color: $light-grey;
   padding: $resource-padding;
   margin: $resource-margin;
 
+  &--resource {
+    width: $resource-width;
+  }
   &:nth-of-type(3n + 1) {
     margin-left: 0;
   }
-
   &-category {
     @include h4;
     letter-spacing: 1.3px;
     margin-bottom: 10px;
-  }
-  h2 {
-    margin: 10px 0px 0px 0px;
-    font-size: 1.125em;
-    letter-spacing: 0.95px;
-    line-height: 1.18em;
   }
   &-dop {
     font-size: 0.88em;
