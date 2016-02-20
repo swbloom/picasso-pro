@@ -18,12 +18,18 @@
 <section class="card-wrapper">
 <?php if ( $projectsQuery->have_posts() ) : ?>
   <?php while ( $projectsQuery->have_posts()) : $projectsQuery->the_post(); ?>
-    <article class="card" id="<?php echo $post->post_name; ?>">
-      <p class="card-category">Projects</p>
-      <h2 class="post-title"><?php the_title(); ?></h2>
-      <p class="card-dop"><?php the_field('project-date'); ?></p>
-      <div class="card-summary">
-        <?php the_field('project-description');  ?>
+    <article class="card card--has-columns card--full-bleed" id="<?php echo $post->post_name; ?>">
+      <div class="card-column card-column--projects card-column--two-thirds">
+        <p class="card-category">Projects</p>
+        <h2 class="card-title"><?php the_title(); ?></h2>
+        <p class="card-dop"><?php the_field('project-date'); ?></p>
+        <div class="card-summary">
+        <?php the_field('project-short-description');  ?>
+        </div>
+        <a class="card-download" href="<?php the_permalink() ?>">Read more and watch</a>
+      </div>
+      <?php $project_image = get_field('project-image'); ?>
+      <div class="card-column card-column--one-third card-column--has-image" style="background-image: url(<?php echo $project_image['url'] ?>)">
       </div>
     </article>
   <?php endwhile; ?>

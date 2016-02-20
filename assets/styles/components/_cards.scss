@@ -1,6 +1,7 @@
 $resource-width: 266px;
-$resource-margin: 18px 17px;
-$resource-padding: 25px 20px;
+$card-margin: 18px 17px;
+$card-padding: 25px 20px;
+$link-underline-color: #979797;
 
 .card-wrapper {
   display: flex;
@@ -8,19 +9,50 @@ $resource-padding: 25px 20px;
 }
 .card {
   background-color: $light-grey;
-  padding: $resource-padding;
-  margin: $resource-margin;
+  padding: $card-padding;
+  margin: $card-margin;
 
+  &--has-columns {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+  &--full-bleed {
+    padding: 0;
+  }
+  &-column {
+    &--projects {
+      padding: $card-padding;
+    }
+    &--two-thirds {
+      width: 66%;
+    }
+    &--one-third {
+      flex-grow: 1;
+    }
+    &--has-image {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
   &--resource {
     width: $resource-width;
   }
-  &:nth-of-type(3n + 1) {
+  .page-template-template-resources &:nth-of-type(3n + 1) {
     margin-left: 0;
   }
   &-category {
     @include h4;
     letter-spacing: 1.3px;
     margin-bottom: 10px;
+  }
+  &-title {
+    margin: 10px 0px 0px 0px;
+    font-size: 1.125em;
+    letter-spacing: 0.95px;
+    line-height: 1.18em;
   }
   &-dop {
     font-size: 0.88em;
@@ -37,9 +69,9 @@ $resource-padding: 25px 20px;
     display: inline-block;
     text-decoration: none;
     color: $brand-primary;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 0.88em;
     padding-bottom: 4px;
-    border-bottom: 1px solid $brand-primary;
+    border-bottom: 1px solid $link-underline-color;
   }
 }
