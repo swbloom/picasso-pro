@@ -1,7 +1,69 @@
 $summary-bottom-margin: 63px;
+$feature-artist-margin: 43px 0 70px 0;
+$past-artists-margin: 46px 0 97px 0;
 
 .featured-artists {
   &-summary {
     margin-bottom: $summary-bottom-margin;
+  }
+}
+.featured-artist {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $feature-artist-margin;
+  margin-top: 43px;
+  &-name {
+    width: 100%;
+    margin-bottom: 26px;
+    letter-spacing: 2px;
+    @include h2;
+    a {
+      text-decoration: none;
+      color: $brand-secondary;
+    }
+  }
+  &-description {
+    p {
+      margin-bottom: 20px;
+      line-height: 2em;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-headshot {
+    margin-left: 30px;
+  }
+}
+.featured-artist-column {
+  &--two-thirds {
+    width: 66.6%;
+  }
+  &--one-third {
+    flex-grow: 1;
+  }
+}
+
+.past-artists {
+  margin: $past-artists-margin;
+  &-title {
+    @include h2;
+    letter-spacing: 2px;
+    margin-bottom: 26px;
+  }
+}
+.past-artist-carousel {
+  display: flex;
+}
+.past-artist {
+  margin-right: 100px;
+  &-headshot {
+    width: 213px;
+    height: 213px;
+    background-size: cover;
+  }
+  &-title {
+    margin-top: 15px;
+    font-size: 1.13em;
   }
 }
