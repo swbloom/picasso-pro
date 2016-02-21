@@ -20,7 +20,7 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="wrap container" role="document">
       <div class="content row">
-      <?php if ( function_exists('yoast_breadcrumb') && !is_front_page()) {
+      <?php if ( function_exists('yoast_breadcrumb') && !is_front_page() && !is_page_template('template-soapbox.php')) {
         yoast_breadcrumb('<p id="breadcrumbs">','</p>');
       } ?>
         <main class="main">

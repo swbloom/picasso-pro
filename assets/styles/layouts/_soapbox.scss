@@ -1,0 +1,34 @@
+$soapbox-bgcolor: #DEDCDC;
+$soapbox-marquee-padding: 40px 0;
+
+// Hack to remove the first container in order to achieve full bleed in the content area on the soapbox page
+.soapbox header ~ .wrap {
+  display: none;
+}
+.soapbox-marquee {
+  padding: $soapbox-marquee-padding;
+  width: 100%;
+  height: 316px;
+  background-color: $soapbox-bgcolor;
+  &-innerwrapper {
+    display: flex;
+  }
+  &-title {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: $brand-secondary;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+  }
+  &-image {
+    margin-right: 45px;
+  }
+  .content {
+    margin: 0;
+  }
+  p {
+    font-size: 1.1em;
+    line-height: 1.35em;
+  }
+}

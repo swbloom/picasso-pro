@@ -54,9 +54,11 @@ $past-artists-margin: 46px 0 97px 0;
 }
 .past-artist-carousel {
   display: flex;
+  flex-wrap: wrap;
 }
 .past-artist {
   margin-right: 100px;
+  margin-bottom: 50px;
   &-headshot {
     width: 213px;
     height: 213px;
