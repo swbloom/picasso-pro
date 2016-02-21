@@ -5,9 +5,9 @@
 ?>
 <?php get_template_part('templates/page', 'header'); ?>
 <?php
-  $resourcesQuery = new WP_QUERY(
+  $incubatorQuery = new WP_QUERY(
     array(
-      'post_type' => 'resource',
+      'post_type' => 'incubator',
       'order' => 'ASC'
       )
 ); ?>
@@ -15,23 +15,24 @@
   <?php the_field('incubator-summary'); ?>
 </section>
 <hr class="rule rule--thick" />
-<!-- <section class="resources-wrapper">
-<?php if ( $resourcesQuery->have_posts() ) : ?>
-  <?php while ( $resourcesQuery->have_posts()) : $resourcesQuery->the_post(); ?>
-    <article class="resource" id="<?php echo $post->post_name; ?>">
-      <p class="resource-category"><?php the_field('resource-category'); ?></p>
-      <h2><?php the_title(); ?></h2>
-      <p class="resource-dop"><?php the_field('resource-dop'); ?></p>
-      <div class="resource-summary">
-        <?php the_field('resource-summary');  ?>
+<section class="incubator-wrapper">
+<?php if ( $incubatorQuery->have_posts() ) : ?>
+  <?php while ( $incubatorQuery->have_posts()) : $incubatorQuery->the_post(); ?>
+    <article class="incubator-project">
+      <h2 class="incubator-project-title"><?php the_title(); ?></h2>
+      <div class="incubator-project-content">
+        <?php the_field('incubator-project-description'); ?>
       </div>
-      <?php $resource = get_field('resource') ?>
-      <a class="resource-download" download="" href="<?php echo $resource['url'] ?>">Download PDF</a>
+      <div class="incubator-project-image">
+        <?php $incubator_feature_image = get_field('incubator-feature-image'); ?>
+
+        <img src="<?php echo $incubator_feature_image['url'] ?>" alt="<?php echo $incubator_feature_image['alt'] ?>" />
+      </div>
     </article>
   <?php endwhile; ?>
   <?php wp_reset_postdata(); ?>
 <?php endif; ?>
-</section> -->
+</section>
 <!-- <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>

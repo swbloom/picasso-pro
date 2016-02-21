@@ -1,0 +1,35 @@
+$incubator-margin: 53px 0;
+
+.incubator-summary {
+  margin-bottom: 49px;
+}
+.incubator-project {
+  margin: $incubator-margin;
+  &-title {
+    @include h2;
+    color: $brand-secondary;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+  }
+  &-content {
+    float: left;
+    width: 70%;
+    margin-right: 2%;
+    p {
+      margin-bottom: 40px;
+    }
+  }
+  &-image {
+    width: 28%;
+    float: left;
+    img {
+      max-width: 100%;
+    }
+  }
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
