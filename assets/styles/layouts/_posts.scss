@@ -1,0 +1,21 @@
+.entry-content {
+  font-size: 1em;
+  line-height: 1.5em;
+  p {
+    margin-bottom: 20px;
+  }
+}
+.entry-feature-image {
+  &--float-right {
+    float: right;
+    margin-left: 35px;
+    margin-bottom: 35px;
+  }
+}
+.entry-full-width-image {
+  text-align: center;
+  margin-top: 35px;
+  img {
+    max-width: 100%;
+  }
+}

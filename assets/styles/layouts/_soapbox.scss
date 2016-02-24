@@ -38,6 +38,9 @@ $soapbox-wrapper-margin:  45px 0;
   article {
     margin-bottom: 33px;
   }
+  article:nth-of-type(n + 2) {
+    margin-top: 47px;
+  }
 }
 .article-title {
   @include h2;
