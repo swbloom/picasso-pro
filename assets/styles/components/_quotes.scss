@@ -1,0 +1,8 @@
+.quote {
+  @include p;
+  margin-left: 35px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-left: 3px solid $brand-secondary;
+}
