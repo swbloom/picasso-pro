@@ -22,3 +22,39 @@
   @include fs-base;
   line-height: 1.5em;
 }
+
+.video {
+  margin-top: 40px;
+}
+.video-title {
+  font-size: 1.13em;
+  letter-spacing: 0.9px;
+  margin-bottom: 12px;
+}
+.video-details {
+  margin-left: 20px;
+  font-size: 0.7em;
+  letter-spacing: 0.7px;
+
+}
+.video-link {
+  display: block;
+  letter-spacing: 0.8px;
+  font-size: 1em;
+  line-height: 1.2em;
+  text-decoration: none;
+  color: $brand-secondary;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-image: url('../images/icon-camera.png');
+    position: relative;
+    top: 5px;
+  }
+}
+.video-player {
+  margin-top: 40px;
+}

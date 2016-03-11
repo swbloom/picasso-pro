@@ -24,15 +24,18 @@
     <hr class="rule rule--medium" />
     <div class="video">
       <div class="video-title">
-        <?php the_field('video-title') ?> (<?php the_field('video-year') ?>) <?php the_field('video-length') ?>
+        <?php the_field('video-title') ?> <span class="video-details">[<?php the_field('video-year') ?>] <?php the_field('video-length') ?></span>
       </div>
       <div class="video-links">
         <?php if( get_field('video-link-open') ): ?>
-          <p>Video Link with Open Captions: <?php the_field('video-link-open'); ?></p>
+          <a href="#" data-href="https://<?php the_field('video-link-open'); ?>" class="video-link">Watch: with Open Captions</a>
         <?php endif; ?>
         <?php if( get_field('video-audio-open') ): ?>
-          <p>Video Link with Open Captions: <?php the_field('video-audio-open'); ?></p>
+          <a href="#" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
         <?php endif; ?>
+        <div class="video-player">
+          <iframe class="video" src="https://<?php the_field('video-audio-open'); ?>" width="875" height="565" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </article>

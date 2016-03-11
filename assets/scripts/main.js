@@ -119,7 +119,32 @@ nav.init = function() {
   });
 }
 
+// Video swapper for vimeo videos on projects page
+var videoSwapper = {
+  videoLink: $('.video-link'),
+  videoElement: $('.video')
+}
+
+videoSwapper.swapVideo = function(videoURL) {
+  this.videoElement.attr('src', videoURL.data('href'));
+}
+
+videoSwapper.addEventListeners = function() {
+  this.videoLink.on('click', function(e){
+    e.preventDefault();
+    videoSwapper.swapVideo($(this));
+  });
+}
+
+videoSwapper.init = function() {
+  if (this.videoLink.length) {
+    this.addEventListeners();
+  }
+}
+
+
 $(document).ready(function() {
   sizer.init();
   nav.init();
+  videoSwapper.init();
 });
