@@ -1,3 +1,7 @@
+
+<!-- Escape the wrapper! -->
+</div></div></main>
+
 <div class="headline-marquee">
   <?php $marquee_image = get_field('marquee-image'); ?>
   <div class="headline-marquee-image" style="background-image: url(<?php echo $marquee_image['url'] ?>)" alt="<?php echo $marquee_image['alt']; ?>">
@@ -21,7 +25,12 @@
     </div>
   </div>
 </div>
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
-<?php endwhile; ?>
+
+<!-- Quick! Back to the wrapper! -->
+<div class="wrap container" role="document">
+  <div class="content row">
+    <main class="main">
+      <?php while (have_posts()) : the_post(); ?>
+        <?php get_template_part('templates/page', 'header'); ?>
+        <?php get_template_part('templates/content', 'page'); ?>
+      <?php endwhile; ?>

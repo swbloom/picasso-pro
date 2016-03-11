@@ -2,4 +2,7 @@
   .content {
     margin-top: 0;
   }
+  .wrap:first-of-type {
+    display: none;
+  }
 }
