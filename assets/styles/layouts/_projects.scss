@@ -1,0 +1,24 @@
+.single-projects {
+  h1 {
+    margin-bottom: 8px;
+  }
+  #breadcrumbs {
+    margin-bottom: 26px;
+  }
+}
+.project-feature {
+  margin-right: 35px;
+}
+.project-content {
+  display: flex;
+  margin-top: 27px;
+  margin-bottom: 30px;
+}
+.project-date {
+  @include fs-small;
+  color: $date-grey;
+}
+.project-description {
+  @include fs-base;
+  line-height: 1.5em;
+}

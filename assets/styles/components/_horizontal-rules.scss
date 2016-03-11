@@ -1,5 +1,8 @@
 .rule {
   color: $brand-primary;
+  &--medium {
+    border: 4px solid $brand-primary;
+  }
   &--thick {
     border: 5px solid $brand-primary;
   }
