@@ -58,12 +58,13 @@
             </div>
             <div class="video-links">
               <?php if( get_field('video-link-open') ): ?>
-                <a href="#" data-href="https://<?php the_field('video-link-open'); ?>" class="video-link">Watch: with Open Captions</a>
+                <?php $permalink = substr(get_permalink(), 0, -1); ?>
+                <a href="<?php echo $permalink ?>?open_captions" class="video-link">Watch: with Open Captions</a>
               <?php endif; ?>
               <?php if( get_field('video-audio-open') ): ?>
-                <a href="#" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
+                <a href="<?php the_permalink(); ?>?audio_description" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
               <?php endif; ?>
-              <a href="/archives" class="home-link">View more from the Archive</a>
+              <a href="/archive" class="home-link">View more from the Archive</a>
             </div>
           </div>
         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
@@ -111,9 +112,16 @@
             }
 
           ?>
-          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+          <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
+          </div>
+          <p class="feature-content-category" />
+          <?php $post_type = get_post_type_object( get_post_type($post) );
+          echo $post_type->label ; ?>
+          </p>
+          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
           <?php endif; ?>
-          <img src="<?php echo $featured_image['url'] ?>" />
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
         <div class="featured-content-2">
@@ -156,8 +164,14 @@
             }
 
           ?>
-          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          <img src="<?php echo $featured_image['url'] ?>" />
+          <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
+          </div>
+          <p class="feature-content-category" />
+          <?php $post_type = get_post_type_object( get_post_type($post) );
+          echo $post_type->label ; ?>
+          </p>
+          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
@@ -201,9 +215,79 @@
             }
 
           ?>
-          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          <img src="<?php echo $featured_image['url'] ?>" />
+          <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
+          </div>
+          <p class="feature-content-category" />
+          <?php $post_type = get_post_type_object( get_post_type($post) );
+          echo $post_type->label ; ?>
+          </p>
+          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
       </div>
+      <hr class="rule rule--thick" />
+      <div class="featured-content-4">
+        <?php
+
+        $featured_content_4 = get_field('featured-content-4');
+
+        if( $featured_content_4 ):
+          // override $post
+          $post = $featured_content_4;
+          setup_postdata( $post );
+
+          $post_type = get_post_type($post);
+
+          switch ($post_type) {
+            case 'featured-artist':
+              $featured_image = get_field('artist-headshot');
+              $excerpt = get_field('featured-artists-summary');
+             break;
+
+            case 'soapbox-article':
+              $featured_image = get_field('article-feature-image');
+              $excerpt = get_field('article-excerpt');
+             break;
+
+            case 'resource':
+              // currently no feature image for resources
+              $excerpt = get_field('resource-summary');
+             break;
+
+            case 'projects':
+              $featured_image = get_field('project-image');
+              $excerpt = get_field('project-short-description');
+             break;
+
+            case 'incubator':
+              $featured_image = get_field('incubator-feature-image');
+              $excerpt = get_field('incubator-project-description');
+             break;
+
+            case 'soapbox':
+              $featured_image = get_field('article-feature-image');
+              $excerpt = get_field('soapbox-summary');
+            break;
+
+          }
+
+        ?>
+        <div class="column">
+          <p class="feature-content-category" />
+          <?php $post_type = get_post_type_object( get_post_type($post) );
+          echo $post_type->label ; ?>
+          </p>
+          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <div class="feature-content-description"><?php echo $excerpt ?></div>
+          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+        </div>
+        <div class="column">
+          <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
+          </div>
+        </div>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+      </div>
+

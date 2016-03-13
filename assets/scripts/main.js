@@ -130,10 +130,14 @@ videoSwapper.swapVideo = function(videoURL) {
 }
 
 videoSwapper.addEventListeners = function() {
-  this.videoLink.on('click', function(e){
-    e.preventDefault();
-    videoSwapper.swapVideo($(this));
-  });
+  var homePage = $('.home');
+  console.log(homePage.length);
+  if (homePage.length !== 1) {
+    this.videoLink.on('click', function(e){
+      e.preventDefault();
+      videoSwapper.swapVideo($(this));
+    });
+  }
 }
 
 videoSwapper.init = function() {

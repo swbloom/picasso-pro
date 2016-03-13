@@ -49,6 +49,53 @@
   line-height: 1.35em;
 }
 .featured-content {
+  margin-top: 47px;
+  margin-bottom: 45px;
   display: flex;
   justify-content: space-between;
+}
+.featured-content-4 {
+  margin-top: 54px;
+  display: flex;
+  .column {
+    width: 50%;
+  }
+}
+.feature-content-image {
+  background-size: cover;
+  width: 276px;
+  height: 276px;
+}
+.feature-content-title {
+  font-size: 1.2em;
+  display: block;
+  color: $brand-primary;
+  text-decoration: none;
+  letter-spacing: 0.95px;
+  &:visited {
+    color: $brand-primary;
+  }
+}
+.feature-content-category {
+  @include h4;
+  letter-spacing: 1.3px;
+  margin-bottom: 8px;
+  margin-top: 25px;
+}
+.feature-content-link {
+  display: inline-block;
+  text-decoration: none;
+  color: $brand-primary;
+  margin-top: 10px;
+  font-size: 1em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $link-underline-color;
+}
+.feature-content-description {
+  line-height: 1.33em;
+  margin-right: 100px;
+  margin-top: 10px;
+  p:nth-of-type(n + 2) {
+    display: none;
+  }
 }

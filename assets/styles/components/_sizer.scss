@@ -4,7 +4,11 @@ $sizer-button-padding: 5px;
 #sizer {
   @include p;
   padding: $sizer-padding;
-  border: 1px solid $white;
+  border-style: solid;
+  border-color: $white;
+  border-right-width: 1px;
+  border-top-width: 0px;
+  border-bottom-width: 1px;
   color: $white;
   display: flex;
   justify-content: center;

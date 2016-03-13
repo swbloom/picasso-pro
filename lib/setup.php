@@ -88,6 +88,8 @@ function display_sidebar() {
     is_page(),
     is_archive(),
     is_page_template('template-custom.php'),
+    is_singular('featured-artist'),
+    is_singular('projects')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
