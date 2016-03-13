@@ -94,7 +94,7 @@
                break;
 
               case 'resource':
-                // currently no feature image for resources
+                $featured_image = get_field('resource-feature-image');
                break;
 
               case 'projects':
@@ -120,7 +120,12 @@
           echo $post_type->label ; ?>
           </p>
           <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
-          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php if ($post_type->name == 'resource') { ?>
+            <?php $resource = get_field('resource') ?>
+            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
+          <?php } else { ?>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php } ?>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
@@ -146,7 +151,7 @@
                break;
 
               case 'resource':
-                // currently no feature image for resources
+                $featured_image = get_field('resource-feature-image');
                break;
 
               case 'projects':
@@ -171,7 +176,12 @@
           echo $post_type->label ; ?>
           </p>
           <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
-          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php if ($post_type->name == 'resource') { ?>
+            <?php $resource = get_field('resource') ?>
+            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
+          <?php } else { ?>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php } ?>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
@@ -197,7 +207,7 @@
                break;
 
               case 'resource':
-                // currently no feature image for resources
+                $featured_image = get_field('resource-feature-image');
                break;
 
               case 'projects':
@@ -222,7 +232,12 @@
           echo $post_type->label ; ?>
           </p>
           <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
-          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php if ($post_type->name == 'resource') { ?>
+            <?php $resource = get_field('resource') ?>
+            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
+          <?php } else { ?>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php } ?>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
@@ -281,7 +296,12 @@
           </p>
           <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
           <div class="feature-content-description"><?php echo $excerpt ?></div>
-          <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php if ($post_type->name == 'resource') { ?>
+            <?php $resource = get_field('resource') ?>
+            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
+          <?php } else { ?>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+          <?php } ?>
         </div>
         <div class="column">
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">

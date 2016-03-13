@@ -1,20 +1,17 @@
 $marquee-innerwrapper-margin: 60px 40px;
 
 .headline-marquee {
-  height: 0;
-  padding-bottom: 42%;
   background-color: $light-grey;
   display: flex;
 
   &-image {
     background-size: cover;
     width: 55%;
-    padding-bottom: 42%;
     flex-shrink: 0;
+    background-position: 50% 17%;
   }
 
   &-text {
-    padding-bottom: 42%;
     h1 {
       @include h1;
       margin: 20px 0;
@@ -29,6 +26,7 @@ $marquee-innerwrapper-margin: 60px 40px;
     display: flex;
     line-height: 1.5em;
     a {
+      text-decoration: none;
       color: $brand-secondary;
     }
   }

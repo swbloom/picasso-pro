@@ -14,4 +14,6 @@
     </div>
     <hr class="rule rule--medium" />
   </article>
+  <?php comments_template('/templates/comments.php'); ?>
+
 <?php endwhile; ?>
