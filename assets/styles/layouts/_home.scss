@@ -5,4 +5,50 @@
   .wrap:first-of-type {
     display: none;
   }
+  .page-header {
+    display: none;
+  }
+}
+.home-link {
+  display: inline-block;
+  text-decoration: none;
+  color: $brand-primary;
+  margin-top: 28px;
+  font-size: 1em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $link-underline-color;
+}
+.home-project {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 47px;
+}
+.home-project-image {
+  margin-right: 55px;
+}
+.home-project-category {
+  @include h4;
+  letter-spacing: 1.3px;
+  margin-bottom: 8px;
+}
+.home-project-title {
+  display: block;
+  margin: 0px 0px 5px 0px;
+  font-size: 1.2em;
+  letter-spacing: 0.95px;
+  line-height: 1.18em;
+  text-decoration: none;
+  &:visited {
+    color: $brand-primary;
+  }
+}
+.home-project-description {
+  margin: 15px 0px 29px 0px;
+  font-size: 1em;
+  letter-spacing: 0.81px;
+  line-height: 1.35em;
+}
+.featured-content {
+  display: flex;
+  justify-content: space-between;
 }
