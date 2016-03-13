@@ -146,9 +146,34 @@ videoSwapper.init = function() {
   }
 }
 
+// Add active state to nav menu when on single posts
+navActiveState = {};
+
+// get everything between the third set of slashes
+navActiveState.getCurrentPage = function() {
+  // brittle
+  return window.location.href.split('/')[3];
+}
+
+navActiveState.setActiveNavClass = function() {
+  var currentPage = this.getCurrentPage();
+
+  if (currentPage === 'featured-artist') {
+    $('.menu-featured-artists').addClass('active');
+  } else if (currentPage === 'projects') {
+    $('.menu-archive').addClass('active');
+  } else if (currentPage === 'soapbox-article') {
+    $('.menu-soapbox').addClass('active');
+  }
+}
+
+navActiveState.init = function() {
+  this.setActiveNavClass();
+}
 
 $(document).ready(function() {
   sizer.init();
   nav.init();
   videoSwapper.init();
+  navActiveState.init();
 });
