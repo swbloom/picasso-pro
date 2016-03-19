@@ -179,6 +179,12 @@ queryParamStripper.init = function() {
   console.log(queryString);
 }
 
+// fix skiplinks focus issue in chrome
+function fixSkiplinks(){
+  jQuery('[href^="#"][href!="#"]').click(function() {
+    jQuery(jQuery(this).attr('href')).attr('tabIndex', -1).focus();
+  });
+}
 
 
 $(document).ready(function() {
@@ -187,9 +193,5 @@ $(document).ready(function() {
   videoSwapper.init();
   navActiveState.init();
   queryParamStripper.init();
-
-  // activate skiplinks
-  jQuery('[href^="#"][href!="#"]').click(function() {
-    jQuery(jQuery(this).attr('href')).attr('tabIndex', -1).focus();
-  });
+  fixSkiplinks();
 });
