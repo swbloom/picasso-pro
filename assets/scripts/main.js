@@ -187,4 +187,9 @@ $(document).ready(function() {
   videoSwapper.init();
   navActiveState.init();
   queryParamStripper.init();
+
+  // activate skiplinks
+  jQuery('[href^="#"][href!="#"]').click(function() {
+    jQuery(jQuery(this).attr('href')).attr('tabIndex', -1).focus();
+  });
 });

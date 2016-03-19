@@ -2,7 +2,7 @@
 <!-- Escape the wrapper! -->
 </div></div></main>
 
-<div class="headline-marquee">
+<div class="headline-marquee" id="content-main">
   <?php $marquee_image = get_field('marquee-image'); ?>
   <div class="headline-marquee-image" style="background-image: url(<?php echo $marquee_image['url'] ?>)" alt="<?php echo $marquee_image['alt']; ?>">
 

@@ -1,4 +1,8 @@
 <header class="banner">
+  <ul class="skip-links" >
+    <li><a href="#menu-primary-navigation">Skip to navigation</a></li>
+    <li><a href="<?php echo is_front_page() ? '#content-main' : '#main' ?>">Skip to the main content</li>
+  </ul>
   <?php get_template_part( 'templates/partials/sizer/sizer'); ?>
   <div class="container">
       <p class='screen-reader-text'> <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></p>
