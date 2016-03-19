@@ -47,7 +47,7 @@
               <div class="article-excerpt">
                 <?php the_field('article-excerpt') ?>
               </div>
-              <a class="permalink" href="<?php the_permalink() ?>">Read More</a>
+              <a class="permalink" href="<?php the_permalink() ?>">Read More about <?php the_title() ?></a>
             </article>
             <hr class="rule rule--thick">
           <?php endwhile; ?>

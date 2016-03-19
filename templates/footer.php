@@ -1,13 +1,13 @@
 <?php
   function display_social_media_icons() {
     $facebook = get_theme_mod('picassopro_facebook_url') ?
-      "<a href='http://www.facebook.com/" . get_theme_mod('picassopro_facebook_url') . "'> <span class='social-icon social-icon-facebook'></a></span>"
+      "<a href='http://www.facebook.com/" . get_theme_mod('picassopro_facebook_url') . "'><span class='social-icon social-icon-facebook'><p class='screen-reader-text'>Facebook Icon</p></a></span>"
       : null;
     $twitter = get_theme_mod('picassopro_twitter_handle') ?
-      "<a href='http://www.twitter.com/" . get_theme_mod('picassopro_twitter_handle') . "'> <span class='social-icon social-icon-twitter'></a></span>"
+      "<a href='http://www.twitter.com/" . get_theme_mod('picassopro_twitter_handle') . "'> <span class='social-icon social-icon-twitter'><p class='screen-reader-text'>Twitter Icon</p></a></span>"
       : null;;
     $youtube = get_theme_mod('picassopro_vimeo_url') ?
-      "<a href='http://www.vimeo.com/" . get_theme_mod('picassopro_vimeo_url') . "'> <span class='social-icon social-icon-vimeo'></a></span>"
+      "<a href='http://www.vimeo.com/" . get_theme_mod('picassopro_vimeo_url') . "'> <span class='social-icon social-icon-vimeo'><p class='screen-reader-text'>Vimeo Icon</p></a></span>"
       : null;
 
 ?>

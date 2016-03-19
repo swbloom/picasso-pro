@@ -1,8 +1,7 @@
 <header class="banner">
   <?php get_template_part( 'templates/partials/sizer/sizer'); ?>
   <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>">
-
+      <p class='screen-reader-text'> <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></p>
       <div class='site-logo'>
         <?php if( get_theme_mod( 'picassopro_logo') ) : ?>
           <img src='<?php echo esc_url( get_theme_mod( 'picassopro_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>

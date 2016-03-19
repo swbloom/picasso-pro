@@ -59,10 +59,10 @@
             <div class="video-links">
               <?php if( get_field('video-link-open') ): ?>
                 <?php $permalink = substr(get_permalink(), 0, -1); ?>
-                <a href="<?php echo $permalink ?>?open_captions" class="video-link">Watch: with Open Captions</a>
+                <a href="<?php echo $permalink ?>#video?open_captions" class="video-link">Watch <?php the_title() ?> with Open Captions</a>
               <?php endif; ?>
               <?php if( get_field('video-audio-open') ): ?>
-                <a href="<?php the_permalink(); ?>?audio_description" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
+                <a href="<?php the_permalink(); ?>#video?audio_description" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch <?php the_title() ?> with Audio Description and Open Captions</a>
               <?php endif; ?>
               <a href="/archive" class="home-link">View more from the Archive</a>
             </div>
@@ -119,12 +119,12 @@
           <?php $post_type = get_post_type_object( get_post_type($post) );
           echo $post_type->label ; ?>
           </p>
-          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <p class="feature-content-title"><?php the_title(); ?></p>
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
             <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
           <?php } ?>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
@@ -175,12 +175,12 @@
           <?php $post_type = get_post_type_object( get_post_type($post) );
           echo $post_type->label ; ?>
           </p>
-          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <p class="feature-content-title"><?php the_title(); ?></p>
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
-            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
+            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource "<?php the_title() ?>"</a>
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
           <?php } ?>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
@@ -231,12 +231,12 @@
           <?php $post_type = get_post_type_object( get_post_type($post) );
           echo $post_type->label ; ?>
           </p>
-          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <p class="feature-content-title"><?php the_title(); ?></p>
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
-            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
+            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource "<?php the_title() ?>"</a>
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
           <?php } ?>
           <?php endif; ?>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
@@ -294,13 +294,13 @@
           <?php $post_type = get_post_type_object( get_post_type($post) );
           echo $post_type->label ; ?>
           </p>
-          <a href="<?php the_permalink(); ?>" class="feature-content-title"><?php the_title(); ?></a>
+          <p class="feature-content-title"><?php the_title(); ?></p>
           <div class="feature-content-description"><?php echo $excerpt ?></div>
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
             <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More</a>
+            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
           <?php } ?>
         </div>
         <div class="column">

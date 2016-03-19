@@ -20,13 +20,13 @@ if( $current_featured_artist ):
 
   ?>
     <div class="featured-artist">
-      <h3 class="featured-artist-name">
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-      </h3>
+      <h2 class="featured-artist-name">
+        <?php the_title(); ?>
+      </h2>
       <div class="featured-artist-column featured-artist-column--two-thirds">
         <div class="featured-artist-description">
           <?php the_field('artist-short-description'); ?>
-          <a href="<?php the_permalink() ?>" class="permalink">Read More</a>
+          <a href="<?php the_permalink() ?>" class="permalink">Read More about <?php the_title(); ?></a>
         </div>
       </div>
       <div class="featured-artist-column featured-artist-column--one-third">
@@ -40,13 +40,13 @@ if( $current_featured_artist ):
 <?php endif; ?>
 <hr class="rule rule--thick" />
 <div class="past-artists">
-  <h4 class="past-artists-title">Past Featured Artists</h4>
+  <h3 class="past-artists-title">Past Featured Artists</h4>
   <?php
     $current_featured_artist_id = get_field('current-featured-artist', $post->ID);
     $featuredArtistsQuery = new WP_QUERY(
       array(
         'post_type' => 'featured-artist',
-        'order' => 'ASC',
+        'order' => 'DESC',
         'post__not_in' => array($current_featured_artist_id->ID),
         )
   ); ?>
@@ -61,7 +61,7 @@ if( $current_featured_artist ):
             <?php echo $post->post_title; ?>
           </div>
           <div class="past-artist-link">
-            <a href="<?php the_permalink() ?>" class="permalink">Read More</a>
+            <a href="<?php the_permalink() ?>" class="permalink">Read More about <?php the_title() ?></a>
           </div>
         </div>
       <?php endwhile; ?>

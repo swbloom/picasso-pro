@@ -5,9 +5,9 @@ if (post_password_required()) {
 ?>
 
 <section id="comments" class="comments">
-  <h3 class="comments-title">
+  <div class="comments-title">
     Let's talk about it
-  </h3>
+  </div>
   <p class="comments-description">
     Leave a comment if you are inspired. Tweet or post to Facebook with the sharing icons under each post. Send us an email if you would like to be considered as a candidate to have your own post in this space.
   </p>

@@ -9,7 +9,7 @@
   $projectsQuery = new WP_QUERY(
     array(
       'post_type' => 'projects',
-      'order' => 'ASC'
+      'order' => 'DESC'
       )
 ); ?>
 <section class="summary archives-summary">

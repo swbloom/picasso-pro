@@ -23,7 +23,7 @@ use Roots\Sage\Wrapper;
       <?php if ( function_exists('yoast_breadcrumb') && !is_front_page() && !is_page_template('template-soapbox.php')) {
         yoast_breadcrumb('<p id="breadcrumbs">','</p>');
       } ?>
-        <main class="main">
+        <main class="main" id="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>

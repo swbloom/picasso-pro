@@ -9,7 +9,7 @@
   $resourcesQuery = new WP_QUERY(
     array(
       'post_type' => 'resource',
-      'order' => 'ASC'
+      'order' => 'DESC'
       )
 ); ?>
 <section class="summary resources-summary">

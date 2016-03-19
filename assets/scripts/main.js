@@ -171,9 +171,20 @@ navActiveState.init = function() {
   this.setActiveNavClass();
 }
 
+// grab the query param
+var queryParamStripper = {};
+
+queryParamStripper.init = function() {
+  var queryString = window.location.search.slice(1);
+  console.log(queryString);
+}
+
+
+
 $(document).ready(function() {
   sizer.init();
   nav.init();
   videoSwapper.init();
   navActiveState.init();
+  queryParamStripper.init();
 });
