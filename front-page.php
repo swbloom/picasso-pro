@@ -3,8 +3,14 @@
 </div></div></main>
 
 <div class="headline-marquee" id="content-main">
-  <?php $marquee_image = get_field('marquee-image'); ?>
-  <div class="headline-marquee-image" style="background-image: url(<?php echo $marquee_image['url'] ?>)" alt="<?php echo $marquee_image['alt']; ?>">
+  <?php
+
+  $images = get_field('marquee-images');
+  $rand = array_rand($images, 1);
+
+  ?>
+
+  <div class="headline-marquee-image" style="background-image: url(<?php echo $images[$rand]['url'] ?>)" alt="<?php echo $images[$rand]['alt']; ?>">
 
   </div>
   <div class="headline-marquee-text">
