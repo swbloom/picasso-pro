@@ -22,9 +22,16 @@
   display: flex;
   margin-top: 60px;
   margin-bottom: 47px;
+  @media screen and ( max-width: $screen-sm ) {
+    flex-direction: column;
+  }
 }
 .home-project-image {
   margin-right: 55px;
+  @media screen and ( max-width: $screen-sm ) {
+    margin-right: 0;
+    margin-bottom: 55px;
+  }
 }
 .home-project-category {
   @include h4;
@@ -55,12 +62,18 @@
   margin-bottom: 45px;
   display: flex;
   justify-content: space-between;
+  @media screen and ( max-width: $screen-sm ) {
+    flex-direction: column;
+  }
 }
 .featured-content-4 {
   margin-top: 54px;
   display: flex;
   .column:first-of-type {
     flex-grow: 1;
+  }
+  @media screen and ( max-width: $screen-sm ) {
+    flex-direction: column-reverse;
   }
 }
 .feature-content-image {
@@ -99,5 +112,16 @@
   margin-top: 10px;
   p:nth-of-type(n + 2) {
     display: none;
+  }
+  @media screen and ( max-width: $screen-sm ) {
+    margin-right: 0px;
+  }
+}
+.featured-content-1, .featured-content-2, .featured-content-3 {
+  @media screen and (max-width: $screen-sm) {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

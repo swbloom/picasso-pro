@@ -61,6 +61,10 @@
     position: relative;
     top: 5px;
   }
+  @media screen and (max-width: $screen-sm) {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+  }
 }
 .video-player {
   margin-top: 7px;

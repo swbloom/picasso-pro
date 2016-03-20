@@ -34,16 +34,24 @@ $marquee-innerwrapper-margin: 60px 40px;
     display: flex;
     line-height: 1.5em;
     @media screen and (max-width: $screen-sm) {
-      flex-direction: column;
+      display: block;
     }
     a {
       text-decoration: none;
       color: $brand-secondary;
+    }
+    p {
+      @media screen and (max-width: $screen-sm) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
 .marquee-text-innerwrapper {
   margin: $marquee-innerwrapper-margin;
   max-width: 400px;
+  @media screen and (max-width: $screen-sm) {
+    max-width: 100%;
+  }
 }
 
