@@ -1,10 +1,20 @@
+.search-wrap {
+  border: 1px solid $white;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
 #search-input {
   @include p;
   background: transparent;
-  border: 1px solid $white;
+  border: 0;
   height: 37px;
   letter-spacing: 0.74px;
   min-width: 194px;
+  font-size: 0.9em;
   color: $white;
   &::placeholder {
     color: $white;
@@ -15,4 +25,10 @@
 }
 .screen-reader-text {
   visibility: hidden;
+}
+.magnifying-glass {
+  width: 17px;
+  height: 19px;
+  position: relative;
+  margin-left: 15px;
 }
