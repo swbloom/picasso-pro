@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 950px) {
     flex-direction: column;
     align-items: flex-start;
     height: auto;

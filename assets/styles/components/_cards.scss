@@ -13,6 +13,7 @@ $card-padding: 25px 20px;
 
   @media screen and (max-width: $screen-sm) {
     flex-direction: column-reverse;
+    margin: 18px 0px;
   }
 
   &--has-columns {
