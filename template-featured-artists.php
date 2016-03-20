@@ -23,16 +23,18 @@ if( $current_featured_artist ):
       <h2 class="featured-artist-name">
         <?php the_title(); ?>
       </h2>
-      <div class="featured-artist-column featured-artist-column--two-thirds">
-        <div class="featured-artist-description">
-          <?php the_field('artist-short-description'); ?>
-          <a href="<?php the_permalink() ?>" class="permalink">Read More about <?php the_title(); ?></a>
+      <div class="featured-artist-columns">
+        <div class="featured-artist-column featured-artist-column--two-thirds">
+          <div class="featured-artist-description">
+            <?php the_field('artist-short-description'); ?>
+            <a href="<?php the_permalink() ?>" class="permalink">Read More about <?php the_title(); ?></a>
+          </div>
         </div>
-      </div>
-      <div class="featured-artist-column featured-artist-column--one-third">
-        <div class="featured-artist-headshot">
-          <?php $artist_headshot = get_field('artist-headshot'); ?>
-          <img src="<?php echo $artist_headshot['url'] ?>" alt="<?php echo $artist_headshot['alt'] ?>" ?>
+        <div class="featured-artist-column featured-artist-column--one-third">
+          <div class="featured-artist-headshot">
+            <?php $artist_headshot = get_field('artist-headshot'); ?>
+            <img src="<?php echo $artist_headshot['url'] ?>" alt="<?php echo $artist_headshot['alt'] ?>" ?>
+          </div>
         </div>
       </div>
     </div>

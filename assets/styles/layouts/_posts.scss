@@ -10,6 +10,9 @@
     float: right;
     margin-left: 35px;
     margin-bottom: 35px;
+    @media screen and ( max-width: $screen-sm ) {
+      width: 100%;
+    }
   }
 }
 .entry-full-width-image {

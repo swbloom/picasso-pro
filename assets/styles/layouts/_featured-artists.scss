@@ -12,10 +12,17 @@ $past-artists-margin: 46px 0 97px 0;
   flex-wrap: wrap;
   margin: $feature-artist-margin;
   margin-top: 43px;
+  &-columns {
+    display: flex;
+    @media screen and ( max-width: $screen-sm ) {
+      flex-direction: column-reverse;
+    }
+  }
   &-name {
     width: 100%;
     margin-bottom: 26px;
     letter-spacing: 2px;
+    color: $brand-secondary;
     @include h2;
     a {
       text-decoration: none;
@@ -33,14 +40,28 @@ $past-artists-margin: 46px 0 97px 0;
   }
   &-headshot {
     margin-left: 30px;
+    img {
+      max-width: 100%;
+    }
+    @media screen and ( max-width: $screen-sm ) {
+      margin-left: 0px;
+    }
   }
 }
 .featured-artist-column {
   &--two-thirds {
     width: 66.6%;
+    @media screen and ( max-width: $screen-sm ) {
+      width: 100%;
+      margin-top: 40px;
+    }
   }
   &--one-third {
+    width: 33.3%;
     flex-grow: 1;
+    @media screen and ( max-width: $screen-sm ) {
+      width: 100%;
+    }
   }
 }
 
@@ -57,8 +78,14 @@ $past-artists-margin: 46px 0 97px 0;
   flex-wrap: wrap;
 }
 .past-artist {
-  margin-right: 100px;
   margin-bottom: 50px;
+  width: 33.3%;
+  @media screen and ( max-width: $screen-md ) {
+   width: 50%;
+  }
+  @media screen and ( max-width: $screen-sm ) {
+    width: 100%;
+  }
   &-headshot {
     width: 213px;
     height: 213px;

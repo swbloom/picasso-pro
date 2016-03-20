@@ -62,7 +62,7 @@
   margin-bottom: 45px;
   display: flex;
   justify-content: space-between;
-  @media screen and ( max-width: $screen-sm ) {
+  @media screen and ( max-width: 1000px ) {
     flex-direction: column;
   }
 }
@@ -118,7 +118,7 @@
   }
 }
 .featured-content-1, .featured-content-2, .featured-content-3 {
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1000px) {
     margin-bottom: 40px;
     &:last-child {
       margin-bottom: 0;

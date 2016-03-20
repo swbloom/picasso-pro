@@ -37,6 +37,9 @@ $card-padding: 25px 20px;
     &--one-third {
       flex-grow: 1;
       width: 33.3%;
+      @media screen and (max-width: $screen-sm) {
+        width: 100%;
+      }
     }
     &--has-image {
       background-position: center center;
