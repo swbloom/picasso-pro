@@ -8,11 +8,18 @@
 }
 .project-feature {
   margin-right: 35px;
+  @media screen and ( max-width: $screen-sm ) {
+    margin-right: 0px;
+    margin-top: 35px;
+  }
 }
 .project-content {
   display: flex;
   margin-top: 27px;
   margin-bottom: 30px;
+  @media screen and ( max-width: $screen-sm ) {
+    flex-direction: column-reverse;
+  }
 }
 .project-date {
   @include fs-small;

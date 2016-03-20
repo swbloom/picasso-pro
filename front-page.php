@@ -11,7 +11,7 @@
   ?>
 
   <div class="headline-marquee-image" style="background-image: url(<?php echo $images[$rand]['url'] ?>)" alt="<?php echo $images[$rand]['alt']; ?>">
-
+    <span class="screen-reader-text"><?php echo $images[$rand]['alt']; ?></span>
   </div>
   <div class="headline-marquee-text">
     <div class="marquee-text-innerwrapper">
