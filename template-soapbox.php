@@ -30,7 +30,7 @@
           $soapboxQuery = new WP_QUERY(
             array(
               'post_type' => 'soapbox-article',
-              'order' => 'ASC'
+              'order' => 'DESC'
               )
         ); ?>
 
