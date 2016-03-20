@@ -184,10 +184,15 @@ navActiveState.setActiveNavClass = function() {
 
   if (currentPage === 'featured-artist') {
     $('.menu-featured-artists').addClass('active');
+    $('.breadcrumb_last').prepend('<a href="/featured-artist">Featured Artists</a> > ');
   } else if (currentPage === 'projects') {
     $('.menu-archive').addClass('active');
+    $('.breadcrumb_last').prepend('<a href="/archive">Archive</a> > ');
+
   } else if (currentPage === 'soapbox-article') {
     $('.menu-soapbox').addClass('active');
+    $('.breadcrumb_last').prepend('<a href="/soapbox">Soapbox</a> > ');
+
   }
 }
 
