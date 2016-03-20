@@ -71,8 +71,7 @@ header .container {
   }
 }
 .menubar-mobile {
-  position: absolute;
-  top: 100%;
+  margin-top: 40px;
   height: $mobilenav-height;
   text-transform: uppercase;
 }

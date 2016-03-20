@@ -62,8 +62,14 @@ body {
   min-height: 100%;
   position: relative;
 }
+.container {
+  padding: 0px 70px;
+  @media screen and (max-width: $screen-sm) {
+    padding: 0px 35px;
+  }
+}
 .content {
-  margin: 30px 0;
+  margin: 30px 0px;
 }
 
 .page-header {

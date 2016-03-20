@@ -1,5 +1,9 @@
 .contact-wrapper {
   display: flex;
+
+  @media screen and ( max-width: $screen-sm ) {
+    flex-direction: column-reverse;
+  }
 }
 .contact-group {
   margin: 20px 0;

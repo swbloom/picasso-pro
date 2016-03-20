@@ -4,6 +4,9 @@ $mission-padding: 50px;
 .about-wrapper {
   display: flex;
   margin-bottom: 50px;
+  @media screen and ( max-width: $screen-sm ) {
+    flex-direction: column-reverse;
+  }
 }
 .about-summary {
   @include p;
@@ -12,10 +15,18 @@ $mission-padding: 50px;
   p {
     margin-bottom: 35px;
   }
+  @media screen and ( max-width: $screen-sm ) {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 0;
+  }
 }
 .mission {
   background-color: #5B1005;
   height: $mission-height;
+  @media screen and ( max-width: $screen-sm ) {
+    height: auto;
+  }
 }
 .mission-wrapper {
   max-width: $max-width;
@@ -23,7 +34,7 @@ $mission-padding: 50px;
   padding: $mission-padding 0;
   text-align: center;
   h2 {
-    color: #E33920;
+    color: $white;
     @include h2;
     letter-spacing: 2px;
     margin-bottom: 17.5px;
@@ -49,5 +60,8 @@ $mission-padding: 50px;
   p {
     @include p;
     line-height: 1.5em;
+    @media screen and ( max-width: $screen-sm ) {
+      margin: 10px 0;
+    }
   }
 }

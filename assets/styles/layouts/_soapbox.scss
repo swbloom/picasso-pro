@@ -11,6 +11,10 @@ $soapbox-wrapper-margin:  45px 0;
   width: 100%;
   height: 316px;
   background-color: $soapbox-bgcolor;
+  @media screen and ( max-width: $screen-sm ) {
+    height: auto;
+    padding-top: 80px;
+  }
   &-innerwrapper {
     display: flex;
   }
@@ -24,6 +28,9 @@ $soapbox-wrapper-margin:  45px 0;
   }
   &-image {
     margin-right: 45px;
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
   }
   .content {
     margin: 0;
@@ -53,6 +60,11 @@ $soapbox-wrapper-margin:  45px 0;
 }
 .article-featured-image {
   margin-bottom: 34px;
+  @media screen and ( max-width: $screen-sm ) {
+    img {
+      max-width: 100%;
+    }
+  }
 }
 .article-excerpt {
   font-size: 1em;

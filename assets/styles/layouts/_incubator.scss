@@ -20,12 +20,18 @@ $incubator-margin: 53px 0;
       line-height: 1.5em;
       margin-bottom: 25px;
     }
+    @media screen and ( max-width: $screen-sm ){
+      width: 100%;
+    }
   }
   &-image {
     width: 28%;
     float: left;
     img {
       max-width: 100%;
+    }
+    @media screen and ( max-width: $screen-sm ) {
+      width: 100%;
     }
   }
   &:after {
