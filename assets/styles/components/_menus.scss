@@ -7,7 +7,7 @@
 }
 #menu-primary-navigation {
   $menu-height-desktop: 60px;
-  $menu-item-margin: 0 15px;
+  $menu-item-margin: 0 28px;
   $keyline-width: 5px;
 
 
@@ -30,7 +30,7 @@
     margin: $menu-item-margin;
     border-bottom: $keyline-width solid $brand-primary;
 
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 950px) {
       margin: 15px 0px;
       height: auto; // to fix slidedown overflow bug
     }
@@ -38,9 +38,12 @@
     &.active {
       border-bottom: $keyline-width solid $brand-secondary;
 
-      @media screen and ( max-width: $screen-sm ) {
+      @media screen and ( max-width: 950px ) {
         border-bottom: 0px;
       }
+    }
+    &:hover a {
+      color: $brand-secondary;
     }
   }
   a {

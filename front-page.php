@@ -51,10 +51,12 @@
 
       ?>
         <div class="home-project">
-          <div class="home-project-image">
-            <?php $project_feature_image = get_field('project-image') ?>
-            <img src="<?php echo $project_feature_image['url'] ?>" alt="<?php echo $project_feature_image['alt'] ?>" />
-          </div>
+          <a href="<?php the_permalink() ?>">
+            <div class="home-project-image">
+              <?php $project_feature_image = get_field('project-image') ?>
+              <img src="<?php echo $project_feature_image['url'] ?>" alt="<?php echo $project_feature_image['alt'] ?>" />
+            </div>
+          </a>
           <div class="home-project-details">
             <p class="home-project-category">Archive</p>
             <a href="<?php the_permalink(); ?>" class="home-project-title"><?php the_title(); ?></a>
