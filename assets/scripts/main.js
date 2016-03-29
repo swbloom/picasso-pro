@@ -149,13 +149,19 @@ var videoSwapper = {
   videoElement: $('.video')
 }
 
+videoSwapper.getVideoIframe = function(videoLink) {
+  // use linkId to lookup iFrame id
+  var linkId = videoLink.data('id');
+  var iFrameId = "#video-" + linkId;
+  return $(iFrameId);
+}
 videoSwapper.swapVideo = function(videoURL) {
-  this.videoElement.attr('src', videoURL.data('href'));
+  var iframe = this.getVideoIframe(videoURL)
+  iframe.attr('src', videoURL.data('href'));
 }
 
 videoSwapper.addEventListeners = function() {
   var homePage = $('.home');
-  console.log(homePage.length);
   if (homePage.length !== 1) {
     this.videoLink.on('click', function(e){
       e.preventDefault();
