@@ -74,8 +74,13 @@ $soapbox-wrapper-margin:  45px 0;
     }
   }
 }
-.article-excerpt {
+.article-excerpt, .article-content {
   font-size: 1em;
   line-height: 1.38em;
   margin-bottom: 20px;
+}
+.article-content {
+  p {
+    margin-bottom: 22px;
+  }
 }

@@ -9,8 +9,8 @@
                     <?php $article_feature_image = get_field('article-feature-image'); ?>
                     <img src="<?php echo $article_feature_image['url'] ?>" alt="<?php echo $article_feature_image['alt'] ?>" ?>
     </div>
-    <div class="article-excerpt">
-      <?php the_field('article-excerpt') ?>
+    <div class="article-content">
+      <?php the_field('article-content') ?>
     </div>
     <hr class="rule rule--medium" />
   </article>

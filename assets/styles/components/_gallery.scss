@@ -1,0 +1,14 @@
+.gallery {
+  margin-bottom: 40px;
+}
+.gallery-title {
+  font-size: 1.13em;
+  letter-spacing: 0.9px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.gallery-images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -18,6 +18,9 @@
       </div>
     </div>
   </article>
+  <?php if( get_field('image-gallery')): ?>
+    <?php get_template_part( 'templates/partials/gallery/gallery'); ?>
+  <?php endif; ?>
   <?php if( get_field('video-title') ): ?>
     <hr class="rule rule--medium" />
     <div class="video">

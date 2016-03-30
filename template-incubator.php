@@ -29,6 +29,9 @@
         <img src="<?php echo $incubator_feature_image['url'] ?>" alt="<?php echo $incubator_feature_image['alt'] ?>" />
       </div>
     </article>
+    <?php if( get_field('image-gallery')): ?>
+      <?php get_template_part( 'templates/partials/gallery/gallery'); ?>
+    <?php endif; ?>
      <?php if( get_field('video-title') ): ?>
         <hr class="rule rule--medium" />
         <div class="video">
@@ -46,7 +49,7 @@
               <?php the_field('video-description') ?>
             </div>
             <div class="video-player">
-              <iframe class="video" id="video-0" src="https://<?php the_field('video-audio-open'); ?>" width="100%" height="565" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <iframe class="video" id="video-0" src="https://<?php the_field('video-link-open'); ?>" width="100%" height="565" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
           </div>
         </div>

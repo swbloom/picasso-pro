@@ -28,6 +28,13 @@
 .project-description {
   @include fs-base;
   line-height: 1.5em;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $brand-primary;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $link-underline-color;
+  }
 }
 
 .video {
@@ -71,4 +78,5 @@
 }
 .video-description {
   margin-top: 22px;
+  line-height: 1.5em;
 }

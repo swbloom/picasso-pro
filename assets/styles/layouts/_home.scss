@@ -101,6 +101,7 @@
   display: inline-block;
   text-decoration: none;
   color: $brand-primary;
+  line-height: 1.33em;
   margin-top: 10px;
   font-size: 1em;
   padding-bottom: 4px;
@@ -118,7 +119,9 @@
   }
 }
 .featured-content-1, .featured-content-2, .featured-content-3 {
+  width: 33.3%;
   @media screen and (max-width: 1000px) {
+    width: 100%;
     margin-bottom: 40px;
     &:last-child {
       margin-bottom: 0;

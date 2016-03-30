@@ -9,6 +9,7 @@
         <?php the_field('project-date') ?>
       </div>
       <div class="project-content">
+        <?php if (get_field('project-image')) { ?>
         <div class="project-feature">
           <?php $project_feature_image = get_field('project-image') ?>
           <img src="<?php echo $project_feature_image['url'] ?>" alt="<?php echo $project_feature_image['alt'] ?>" />
@@ -16,11 +17,15 @@
             <?php the_field('project-image-caption') ?>
           </p>
         </div>
+        <?php } ?>
         <div class="project-description">
           <?php the_field('project-description') ?>
         </div>
       </div>
     </div>
+  <?php if( get_field('image-gallery')): ?>
+    <?php get_template_part( 'templates/partials/gallery/gallery'); ?>
+  <?php endif; ?>
   <?php if( get_field('video-title') ): ?>
     <hr class="rule rule--medium" />
     <div class="video">

@@ -4,6 +4,13 @@
   p {
     margin-bottom: 20px;
   }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $brand-primary;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $link-underline-color;
+  }
 }
 .entry-feature-image {
   &--float-right {
