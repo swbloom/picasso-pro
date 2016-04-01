@@ -65,6 +65,15 @@ body {
     padding-bottom: $footer-height-sm;
   }
 }
+strong {
+  font-weight: 600;
+}
+em {
+  font-style: italic;
+}
+u {
+  text-decoration: underline;
+}
 .container {
   @media screen and (max-width: 1200px) {
     padding: 0 70px;

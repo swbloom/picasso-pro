@@ -19,6 +19,7 @@ $past-artists-margin: 46px 0 97px 0;
     }
   }
   &-name {
+    font-weight: bold;
     width: 100%;
     margin-bottom: 26px;
     letter-spacing: 2px;
@@ -68,6 +69,7 @@ $past-artists-margin: 46px 0 97px 0;
 .past-artists {
   margin: $past-artists-margin;
   &-title {
+    font-weight: bold;
     @include h2;
     letter-spacing: 2px;
     margin-bottom: 26px;
@@ -92,6 +94,7 @@ $past-artists-margin: 46px 0 97px 0;
     background-size: cover;
   }
   &-title {
+    font-weight: bold;
     margin-top: 15px;
     font-size: 1.13em;
   }

@@ -29,10 +29,16 @@
       </div>
       <div class="video-links">
         <?php if( get_field('video-link-open') ): ?>
-          <a href="#" data-id="0" data-href="https://<?php the_field('video-link-open'); ?>" class="video-link">Watch: with Open Captions</a>
+          <div class="video-link-container">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/images/icon-camera.png" alt="a small image of a camera" />
+            <a href="#" data-id="0" data-href="https://<?php the_field('video-link-open'); ?>" class="video-link">Watch: with Open Captions</a>
+          </div>
         <?php endif; ?>
         <?php if( get_field('video-audio-open') ): ?>
-          <a href="#" data-id="0" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
+          <div class="video-link-container">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/images/icon-camera.png" alt="a small image of a camera" />
+            <a href="#" data-id="0" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
+          </div>
         <?php endif; ?>
         <div class="video-description">
           <?php the_field('video-description') ?>
@@ -57,10 +63,16 @@
                   </div>
                   <div class="video-links">
                     <?php if( get_sub_field('video-link-open') ): ?>
-                      <a href="#" data-href="https://<?php the_sub_field('video-link-open'); ?>" data-id="<?php echo $i ?>" class="video-link">Watch: with Open Captions</a>
+                      <div class="video-link-container">
+                        <img src="<?php echo get_template_directory_uri() ?>/dist/images/icon-camera.png" alt="a small image of a camera" />
+                        <a href="#" data-href="https://<?php the_sub_field('video-link-open'); ?>" data-id="<?php echo $i ?>" class="video-link">Watch: with Open Captions</a>
+                      </div>
                     <?php endif; ?>
                     <?php if( get_sub_field('video-audio-open') ): ?>
-                      <a href="#" data-href="https://<?php the_sub_field('video-audio-open'); ?>" data-id="<?php echo $i ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
+                      <div class="video-link-container">
+                        <img src="<?php echo get_template_directory_uri() ?>/dist/images/icon-camera.png" alt="a small image of a camera" />
+                        <a href="#" data-href="https://<?php the_sub_field('video-audio-open'); ?>" data-id="<?php echo $i ?>" class="video-link">Watch: with Audio Description and Open Captions</a>
+                      </div>
                     <?php endif; ?>
                     <div class="video-description">
                       <p><?php the_sub_field('video-description') ?></p>

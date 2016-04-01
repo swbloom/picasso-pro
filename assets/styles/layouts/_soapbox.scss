@@ -24,6 +24,7 @@ $soapbox-wrapper-margin:  45px 0;
     display: flex;
   }
   &-title {
+    font-weight: bold;
     font-size: 1em;
     text-transform: uppercase;
     color: $brand-secondary;
@@ -58,12 +59,16 @@ $soapbox-wrapper-margin:  45px 0;
   }
 }
 .article-title {
+  font-weight: bold;
   @include h2;
   letter-spacing: 1.5px;
   margin-bottom: 10px;
 }
-.article-date {
+.article-date, .article-author {
   font-size: 0.88em;
+}
+.article-author {
+  margin-top: 10px;
   margin-bottom: 34px;
 }
 .article-featured-image {

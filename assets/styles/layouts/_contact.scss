@@ -8,6 +8,7 @@
 .contact-group {
   margin: 20px 0;
   &-header {
+    font-weight: bold;
     @include h3;
     color: $brand-secondary;
     text-transform: uppercase;

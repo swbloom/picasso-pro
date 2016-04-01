@@ -40,6 +40,7 @@
             <article id="<?php echo $post->post_name; ?>">
               <h2 class="article-title"><?php the_title(); ?></h2>
               <p class="article-date"><?php the_date(); ?></p>
+              <p class="article-author"><?php the_field('article-author'); ?></p>
               <div class="article-featured-image">
                 <?php $article_feature_image = get_field('article-feature-image'); ?>
                 <img src="<?php echo $article_feature_image['url'] ?>" alt="<?php echo $article_feature_image['alt'] ?>" ?>

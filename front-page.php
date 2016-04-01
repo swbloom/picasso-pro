@@ -67,10 +67,16 @@
             <div class="video-links">
               <?php if( get_field('video-link-open') ): ?>
                 <?php $permalink = substr(get_permalink(), 0, -1); ?>
-                <a href="<?php echo $permalink ?>#video?open_captions" class="video-link">Watch <?php the_title() ?> with Open Captions</a>
+                <div class="video-link-container">
+                  <img src="<?php echo get_template_directory_uri() ?>/dist/images/icon-camera.png" alt="a small image of a camera" />
+                  <a href="<?php echo $permalink ?>#video?open_captions" class="video-link">Watch <?php the_title() ?> with Open Captions</a>
+                </div>
               <?php endif; ?>
               <?php if( get_field('video-audio-open') ): ?>
-                <a href="<?php the_permalink(); ?>#video?audio_description" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch <?php the_title() ?> with Audio Description and Open Captions</a>
+                <div class="video-link-container">
+                  <img src="<?php echo get_template_directory_uri() ?>/dist/images/icon-camera.png" alt="a small image of a camera" />
+                  <a href="<?php the_permalink(); ?>#video?audio_description" data-href="https://<?php the_field('video-audio-open'); ?>" class="video-link">Watch <?php the_title() ?> with Audio Description and Open Captions</a>
+                </div>
               <?php endif; ?>
               <a href="/archive" class="home-link">View more from the Archive</a>
             </div>
@@ -297,6 +303,7 @@
           }
 
         ?>
+        <?php $excerpt = (strlen($excerpt) > 800) ? substr($excerpt,0,800).'...' : $excerpt; ?>
         <div class="column">
           <p class="feature-content-category" />
           <?php $post_type = get_post_type_object( get_post_type($post) );

@@ -46,7 +46,7 @@
             $maker_name = get_sub_field('maker-name');
 
             ?>
-              <p><?php echo $maker_role ?>: <?php echo $maker_name ?></p>
+              <p><span class="maker-role"><?php echo $maker_role ?></span>: <em><?php echo $maker_name ?></em></p>
           <?php endwhile; ?>
         <?php endif ?>
       </div>

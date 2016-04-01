@@ -41,6 +41,7 @@
   margin-top: 40px;
 }
 .video-title {
+  font-weight: bold;
   font-size: 1.13em;
   letter-spacing: 0.9px;
   margin-bottom: 12px;
@@ -51,6 +52,16 @@
   letter-spacing: 0.7px;
 
 }
+.video-link-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  img {
+    width: 25px;
+    height: 24px;
+    margin-right: 20px;
+  }
+}
 .video-link {
   display: block;
   letter-spacing: 0.8px;
@@ -58,16 +69,6 @@
   line-height: 1.2em;
   text-decoration: none;
   color: $brand-secondary;
-  &:before {
-    content: "";
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    background-image: url('../images/icon-camera.png');
-    position: relative;
-    top: 5px;
-  }
   @media screen and (max-width: $screen-sm) {
     margin-bottom: 20px;
     line-height: 1.5em;

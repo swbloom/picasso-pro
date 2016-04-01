@@ -7,6 +7,7 @@ $incubator-margin: 53px 0;
   margin: $incubator-margin;
   &-title {
     @include h2;
+    font-weight: bold;
     color: $brand-secondary;
     text-transform: uppercase;
     letter-spacing: 2px;

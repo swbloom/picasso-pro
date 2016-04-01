@@ -65,10 +65,12 @@ $card-padding: 25px 20px;
   }
   &-category {
     @include h4;
+    font-weight: bold;
     letter-spacing: 1.3px;
     margin-bottom: 10px;
   }
   &-title {
+    font-weight: bold;
     margin: 10px 0px 0px 0px;
     font-size: 1.125em;
     letter-spacing: 0.95px;
@@ -86,6 +88,7 @@ $card-padding: 25px 20px;
     margin-top: 9px;
   }
   &-download {
+    text-transform: capitalize;
     display: inline-block;
     text-decoration: none;
     color: $brand-primary;

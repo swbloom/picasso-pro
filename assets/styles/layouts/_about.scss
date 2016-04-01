@@ -35,6 +35,9 @@ $mission-padding: 50px;
     height: auto;
   }
 }
+.mission-title {
+  font-weight: bold;
+}
 .mission-wrapper {
   max-width: $max-width;
   margin: 0 auto;
@@ -59,6 +62,7 @@ $mission-padding: 50px;
   margin-bottom: 123px;
   h2 {
     @include h2;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 15px;
@@ -71,4 +75,7 @@ $mission-padding: 50px;
       margin: 10px 0;
     }
   }
+}
+.maker-role {
+  font-weight: bold;
 }
