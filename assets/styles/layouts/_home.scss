@@ -133,12 +133,22 @@
   }
 }
 .featured-content-1, .featured-content-2, .featured-content-3 {
+  a {
+    text-decoration: none;
+  }
   width: 30%;
   @media screen and (max-width: 1000px) {
     width: 100%;
     margin-bottom: 40px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+.featured-content-4 {
+  @media screen and (min-width: $screen-sm) {
+    .feature-content-category {
+      margin-top: 0;
     }
   }
 }

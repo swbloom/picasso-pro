@@ -89,3 +89,30 @@ $soapbox-wrapper-margin:  45px 0;
     margin-bottom: 22px;
   }
 }
+.soapbox-cta {
+  width: 300px;
+  padding: 20px;
+  min-height: 100px;
+  position: absolute;
+  right: 60px;
+  background-color:#DEDCDC;
+  p {
+    line-height: 1.38em;
+  }
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+.soapbox-cta-title {
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: $brand-secondary;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+.soapbox-cta-link {
+  text-decoration: none;
+  color: $brand-primary;
+  border-bottom: 1px solid $link-underline-color;
+}

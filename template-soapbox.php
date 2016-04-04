@@ -26,6 +26,10 @@
   <div class="wrap container">
     <div class="content row">
       <div class="main">
+        <div class="soapbox-cta">
+          <h2 class="soapbox-cta-title">Talk to us!</h2>
+          <p>Leave a comment if you are inspired. Tweet or post to FB with the sharing icons above each post.  <a href="mailto:url@email.com" class="soapbox-cta-link">Send us an email</a> if you would like to be considered as a candidate to have your own post in this space.</p>
+        </div>
         <?php
           $soapboxQuery = new WP_QUERY(
             array(

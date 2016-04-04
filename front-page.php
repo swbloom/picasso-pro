@@ -126,21 +126,24 @@
             }
 
           ?>
-
+          <?php $post_type = get_post_type_object( get_post_type($post) ); ?>
+          <?php if ($post_type->name == 'resource') { ?>
+            <?php $resource = get_field('resource') ?>
+              <a download="" href="<?php echo $resource['url'] ?>">
+          <?php } else { ?>
+              <a href="<?php the_permalink() ?>">
+          <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
           <p class="feature-content-category" />
-          <?php $post_type = get_post_type_object( get_post_type($post) );
-          echo $post_type->label ; ?>
+          <?php echo $post_type->label ; ?>
           </p>
           <p class="feature-content-title"><?php the_title(); ?></p>
-          <?php if ($post_type->name == 'resource') { ?>
-            <?php $resource = get_field('resource') ?>
-            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
-          <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
-          <?php } ?>
+          
+            <!-- <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a> -->
+            <!-- <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More </a> -->
           <?php endif; ?>
+          </a>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
         <div class="featured-content-2">
@@ -183,23 +186,33 @@
             }
 
           ?>
+          <?php $post_type = get_post_type_object( get_post_type($post) ); ?>
+          <?php if ($post_type->name == 'resource') { ?>
+            <?php $resource = get_field('resource') ?>
+              <a download="" href="<?php echo $resource['url'] ?>">
+          <?php } else { ?>
+              <a href="<?php the_permalink() ?>">
+          <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
           <p class="feature-content-category" />
-          <?php $post_type = get_post_type_object( get_post_type($post) );
-          echo $post_type->label ; ?>
+          <?php echo $post_type->label ; ?>
           </p>
           <p class="feature-content-title"><?php the_title(); ?></p>
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
-            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource "<?php the_title() ?>"</a>
+            <!-- <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource "<?php the_title() ?>"</a> -->
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
+            <!-- <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a> -->
           <?php } ?>
           <?php endif; ?>
+          </a>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+          </a>
         </div>
         <div class="featured-content-3">
+          <a href="<?php the_permalink() ?>">
+
           <?php
 
           $featured_content_3 = get_field('featured-content-3');
@@ -239,20 +252,27 @@
             }
 
           ?>
+          <?php $post_type = get_post_type_object( get_post_type($post) ); ?>
+          <?php if ($post_type->name == 'resource') { ?>
+            <?php $resource = get_field('resource') ?>
+              <a download="" href="<?php echo $resource['url'] ?>">
+          <?php } else { ?>
+              <a href="<?php the_permalink() ?>">
+          <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
           <p class="feature-content-category" />
-          <?php $post_type = get_post_type_object( get_post_type($post) );
-          echo $post_type->label ; ?>
+          <?php echo $post_type->label ; ?>
           </p>
           <p class="feature-content-title"><?php the_title(); ?></p>
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
-            <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource "<?php the_title() ?>"</a>
+            <!-- <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource "<?php the_title() ?>"</a> -->
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
+            <!-- <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a> -->
           <?php } ?>
           <?php endif; ?>
+          </a>
           <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
         </div>
       </div>

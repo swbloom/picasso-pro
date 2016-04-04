@@ -1,6 +1,6 @@
 $resource-width: 266px;
 $card-margin: 18px 17px;
-$card-padding: 25px 20px;
+$card-padding: 45px 40px;
 
 .card-wrapper {
   display: flex;
@@ -65,7 +65,7 @@ $card-padding: 25px 20px;
   }
   &-category {
     @include h4;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 1.3px;
     margin-bottom: 10px;
   }

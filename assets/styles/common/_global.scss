@@ -75,6 +75,7 @@ u {
   text-decoration: underline;
 }
 .container {
+  width: 80%;
   @media screen and (max-width: 1200px) {
     padding: 0 70px;
   }
