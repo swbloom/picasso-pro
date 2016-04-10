@@ -57,6 +57,9 @@ $marquee-innerwrapper-margin: 60px 40px;
   margin: $marquee-innerwrapper-margin;
   max-width: 450px;
   width: 80%;
+  a {
+    text-decoration: none;      
+  }
   h1 {
     font-weight: bold;
   }

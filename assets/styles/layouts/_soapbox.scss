@@ -6,6 +6,9 @@ $soapbox-wrapper-margin:  45px 0;
 .soapbox header ~ .wrap {
   display: none;
 }
+.page-template-template-soapbox .main {
+  position: relative;
+}
 .soapbox-marquee {
   padding: $soapbox-marquee-padding;
   width: 100%;
@@ -16,7 +19,7 @@ $soapbox-wrapper-margin:  45px 0;
       margin-top: 0px !important;
     }
   }
-  @media screen and ( max-width: $screen-sm ) {
+  @media screen and ( max-width: 1200px ) {
     height: auto;
     padding-top: 80px;
   }
@@ -57,19 +60,26 @@ $soapbox-wrapper-margin:  45px 0;
   article:nth-of-type(n + 2) {
     margin-top: 47px;
   }
+  a {
+    text-decoration: none;
+    color: $brand-primary;
+  }
 }
 .article-title {
   font-weight: bold;
   @include h2;
+  line-height: 1.225em;
   letter-spacing: 1.5px;
-  margin-bottom: 10px;
+}
+.article-credits {
+  margin-bottom: 25px;
+  margin-top: 15px;
 }
 .article-date, .article-author {
   font-size: 0.88em;
 }
 .article-author {
   margin-top: 10px;
-  margin-bottom: 34px;
 }
 .article-featured-image {
   margin-bottom: 34px;
@@ -94,7 +104,8 @@ $soapbox-wrapper-margin:  45px 0;
   padding: 20px;
   min-height: 100px;
   position: absolute;
-  right: 60px;
+  right: 0;
+  top: 100px;
   background-color:#DEDCDC;
   p {
     line-height: 1.38em;
@@ -115,4 +126,11 @@ $soapbox-wrapper-margin:  45px 0;
   text-decoration: none;
   color: $brand-primary;
   border-bottom: 1px solid $link-underline-color;
+}
+.soapbox-wrapper .article-readmore {
+  color: $brand-secondary;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.8px;
 }

@@ -80,13 +80,13 @@ u {
     padding: 0 70px;
   }
   @media screen and (max-width: $screen-sm) {
-    padding: 0 30px;
+    padding: 0 15px;
+    width: 100%;
   }
 }
 .content {
   margin: 30px auto;
-  width: 90%;
-  max-width: 980px;
+  // width: 90%;
   @media screen and (max-width: $screen-sm) {
     margin: 50px 0px;
   }
@@ -151,4 +151,6 @@ u {
 .skip-links a:focus {
   top: 0;
 }
-
+.fb_iframe_widget span {
+  vertical-align: baseline !important;
+}

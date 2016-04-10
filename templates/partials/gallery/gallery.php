@@ -15,6 +15,9 @@
                     <a href="<?php echo $image['url']; ?>">
                          <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </a>
+                    <div class="gallery-image-caption caption">
+                      <?php echo $image['caption'] ?>
+                    </div>
                 </li>
             <?php endforeach; ?>
         </ul>

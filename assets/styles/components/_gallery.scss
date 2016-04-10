@@ -11,8 +11,23 @@
 .gallery-images {
   display: flex;
   flex-wrap: wrap;
+  @media screen and (max-width: $screen-sm) {
+    flex-direction: column;
+    text-align: center
+  }
   li {
-    width: 20%;
     margin-bottom: 22px;
+    margin-right: 20px;
+    width: 30%;
+    img {
+      width: 100%;
+    }
+    @media screen and (max-width: $screen-md) {
+      width: 46%;
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+    }
+
   }
 }

@@ -28,7 +28,7 @@
       <div class="main">
         <div class="soapbox-cta">
           <h2 class="soapbox-cta-title">Talk to us!</h2>
-          <p>Leave a comment if you are inspired. Tweet or post to FB with the sharing icons above each post.  <a href="mailto:url@email.com" class="soapbox-cta-link">Send us an email</a> if you would like to be considered as a candidate to have your own post in this space.</p>
+          <p>Leave us a comment if you’d like to continue the conversation. Tweet or post to FB with the sharing icons above each post.  <a href="mailto:url@email.com" class="soapbox-cta-link">Send us an email</a> if you would like to be considered as a candidate to have your own post in this space.</p>
         </div>
         <?php
           $soapboxQuery = new WP_QUERY(
@@ -42,9 +42,10 @@
         <?php if ( $soapboxQuery->have_posts() ) : ?>
           <?php while ( $soapboxQuery->have_posts()) : $soapboxQuery->the_post(); ?>
             <article id="<?php echo $post->post_name; ?>">
-              <h2 class="article-title"><?php the_title(); ?></h2>
-              <p class="article-date"><?php the_date(); ?></p>
-              <p class="article-author"><?php the_field('article-author'); ?></p>
+              <a href="<?php the_permalink() ?>"><h2 class="article-title"><?php the_title(); ?></h2></a>
+              <div class="article-credits">
+                <p class="article-date"><?php the_date(); ?> - <?php the_field('article-author'); ?></p>
+              </div>
               <div class="article-featured-image">
                 <?php $article_feature_image = get_field('article-feature-image'); ?>
                 <img src="<?php echo $article_feature_image['url'] ?>" alt="<?php echo $article_feature_image['alt'] ?>" ?>
@@ -52,7 +53,7 @@
               <div class="article-excerpt">
                 <?php the_field('article-excerpt') ?>
               </div>
-              <a class="permalink" href="<?php the_permalink() ?>">Read More about <?php the_title() ?></a>
+              <a href="<?php the_permalink() ?>" class="article-readmore">Read More about <?php the_title() ?></a>
             </article>
             <hr class="rule rule--thick">
           <?php endwhile; ?>

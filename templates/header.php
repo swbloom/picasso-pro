@@ -6,13 +6,15 @@
   <?php get_template_part( 'templates/partials/sizer/sizer'); ?>
   <div class="container">
       <!-- <p class='screen-reader-text'> <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></p> -->
+      <a href="/">
       <div class='site-logo'>
         <?php if( get_theme_mod( 'picassopro_logo') ) : ?>
           <img src='<?php echo esc_url( get_theme_mod( 'picassopro_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
         <?php else: ?>
           <h1 class="site-logo__fallback"><?php echo get_bloginfo('name'); ?></h1>
         <?php endif; ?>
-       </div>
+      </div>
+      </a>
   </div>
   <div class="desktop-hidden">
     <div class="menubar-mobile">

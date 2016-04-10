@@ -14,22 +14,25 @@
     <span class="screen-reader-text"><?php echo $images[$rand]['alt']; ?></span>
   </div>
   <div class="headline-marquee-text">
-    <div class="marquee-text-innerwrapper">
-      <h1>
-        <?php the_field('marquee-headline') ?>
-      </h1>
-      <h2>
-        <?php the_field('marquee-subtitle') ?>
-      </h2>
-      <div class="headline-marquee-caption">
-        <p>
-          <?php the_field('marquee-caption') ?>
-        </p>
-        <?php $marquee_caption_image = get_field('marquee-caption-image'); ?>
-        <img src="<?php echo $marquee_caption_image['url'] ?>" alt="<?php echo $marquee_caption_image['alt']; ?>" />
+      <div class="marquee-text-innerwrapper">
+        <h1>
+          <?php the_field('marquee-headline') ?>
+        </h1>
+        <h2>
+          <?php the_field('marquee-subtitle') ?>
+        </h2>
+        <div class="headline-marquee-caption">
+          <p>
+            <?php the_field('marquee-caption') ?>
+          </p>
+          <?php $marquee_caption_image = get_field('marquee-caption-image'); ?>
+          <a href="https://vimeo.com/158112085">
+          <img src="<?php echo $marquee_caption_image['url'] ?>" alt="<?php echo $marquee_caption_image['alt']; ?>" />
+          </a>
+        </div>
+        </a>
       </div>
     </div>
-  </div>
 </div>
 
 <!-- Quick! Back to the wrapper! -->
@@ -116,6 +119,7 @@
                break;
 
               case 'incubator':
+                $incubator_post = true;
                 $featured_image = get_field('incubator-feature-image');
                break;
 
@@ -130,8 +134,10 @@
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
               <a download="" href="<?php echo $resource['url'] ?>">
+          <?php } else if ($post_type->name == 'incubator') { ?>
+              <a href="./incubator">
           <?php } else { ?>
-              <a href="<?php the_permalink() ?>">
+              <a href"<?php the_permalink() ?>">
           <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
@@ -176,6 +182,7 @@
                break;
 
               case 'incubator':
+                $incubator_post = true;
                 $featured_image = get_field('incubator-feature-image');
                break;
 
@@ -190,8 +197,10 @@
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
               <a download="" href="<?php echo $resource['url'] ?>">
+          <?php } else if ($post_type->name == 'incubator') { ?>
+              <a href="./incubator">
           <?php } else { ?>
-              <a href="<?php the_permalink() ?>">
+              <a href"<?php the_permalink() ?>">
           <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
@@ -242,6 +251,7 @@
                break;
 
               case 'incubator':
+                $incubator_post = true;
                 $featured_image = get_field('incubator-feature-image');
                break;
 
@@ -256,8 +266,10 @@
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
               <a download="" href="<?php echo $resource['url'] ?>">
+          <?php } else if ($post_type->name == 'incubator') { ?>
+              <a href="./incubator">
           <?php } else { ?>
-              <a href="<?php the_permalink() ?>">
+              <a href"<?php the_permalink() ?>">
           <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
@@ -311,6 +323,7 @@
              break;
 
             case 'incubator':
+              $incubator_post = true;
               $featured_image = get_field('incubator-feature-image');
               $excerpt = get_field('incubator-project-description');
              break;
@@ -334,8 +347,10 @@
           <?php if ($post_type->name == 'resource') { ?>
             <?php $resource = get_field('resource') ?>
             <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a>
+          <?php } else if ($post_type->name == 'incubator') { ?>
+            <a href="./incubator" class="feature-content-link">Read More about <?php the_title() ?></a>
           <?php } else { ?>
-            <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
+            <a href="<?php the_permalink() ?>" class="feature-content-link">Read More about <?php the_title() ?></a>
           <?php } ?>
         </div>
         <div class="column">

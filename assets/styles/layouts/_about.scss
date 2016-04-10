@@ -28,6 +28,9 @@ $mission-padding: 50px;
     margin-bottom: 0;
   }
 }
+.about-feature img {
+  max-width: 100%;
+}
 .mission {
   background-color: #5B1005;
   height: $mission-height;

@@ -90,7 +90,7 @@
                     <p><?php the_sub_field('video-description') ?></p>
                   </div>
                   <div class="video-player">
-                    <iframe class="video" id="<?php echo "video-" . $i ?>" src="https://<?php the_sub_field('video-audio-open'); ?>" width="100%" height="565" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <iframe class="video" id="<?php echo "video-" . $i ?>" src="https://<?php the_sub_field('video-link-open'); ?>" width="100%" height="565" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   </div>
                 </div>
               </div>

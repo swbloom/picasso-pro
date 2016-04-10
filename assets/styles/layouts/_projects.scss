@@ -11,6 +11,9 @@
   @media screen and ( max-width: $screen-sm ) {
     margin-right: 0px;
     margin-top: 35px;
+    img {
+      max-width: 100%;
+    }
   }
 }
 .project-content {
