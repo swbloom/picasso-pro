@@ -40,9 +40,6 @@ if( $current_featured_artist ):
     </div>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
-<hr class="rule rule--thick" />
-<div class="past-artists">
-  <h3 class="past-artists-title">Past Featured Artists</h4>
   <?php
     $current_featured_artist_id = get_field('current-featured-artist', $post->ID);
     $featuredArtistsQuery = new WP_QUERY(
@@ -52,6 +49,10 @@ if( $current_featured_artist ):
         'post__not_in' => array($current_featured_artist_id->ID),
         )
   ); ?>
+  <?php if ($featuredArtistsQuery->found_posts > 0): ?>
+  <hr class="rule rule--thick" />
+  <div class="past-artists">
+  <h3 class="past-artists-title">Past Featured Artists</h4>
   <div class="past-artist-carousel">
     <?php if ( $featuredArtistsQuery->have_posts() ) : ?>
       <?php while ( $featuredArtistsQuery->have_posts()) : $featuredArtistsQuery->the_post(); ?>
@@ -70,6 +71,7 @@ if( $current_featured_artist ):
       <?php wp_reset_postdata(); ?>
     <?php endif; ?>
   </div>
+<?php endif ?>
 
 </div>
 

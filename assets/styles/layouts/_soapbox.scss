@@ -83,7 +83,14 @@ $soapbox-wrapper-margin:  45px 0;
 }
 .article-featured-image {
   margin-bottom: 34px;
+  margin-right: 34px;
+  .single-soapbox-article & {
+    float: left;
+  }
   @media screen and ( max-width: $screen-sm ) {
+    .single-soapbox-article & {
+      width: 100%;
+    }
     img {
       max-width: 100%;
     }

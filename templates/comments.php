@@ -6,13 +6,13 @@ if (post_password_required()) {
 
 <section id="comments" class="comments">
   <div class="comments-title">
-    Let's talk about it
+    Comments
   </div>
-  <p class="comments-description">
+<!--   <p class="comments-description">
     Leave a comment if you are inspired. Tweet or post to Facebook with the sharing icons under each post. Send us an email if you would like to be considered as a candidate to have your own post in this space.
-  </p>
+  </p> -->
   <?php if (have_comments()) : ?>
-    <h2><?php printf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sage'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2>
+    <!-- <h2><?php printf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sage'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2> -->
     <ol class="comment-list">
       <?php wp_list_comments(['style' => 'ol', 'short_ping' => true]); ?>
     </ol>

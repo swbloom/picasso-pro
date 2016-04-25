@@ -22,7 +22,7 @@
   }
 ?>
 
-<footer class="content-info">
+<footer class="content-info" id="footer">
     <div class="container">
       <div class="copyright">
         &copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name') ?> · <?php echo strtolower(get_bloginfo('description')) ?>

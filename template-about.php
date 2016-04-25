@@ -23,12 +23,12 @@
 </div></div></div>
 
 <!-- Mission Statement -->
-<div class="mission">
+<section class="mission">
   <div class="mission-wrapper">
     <h2 class="mission-title"><?php the_field('mission-statement-title') ?></h2>
     <div class="mission-description"><?php the_field('mission-statement-description') ?></div>
   </div>
-</div>
+</section>
 
 <!-- Quick! Back to the container! -->
 <div class="wrap container">
@@ -36,7 +36,7 @@
     <div class ="main">
 
 <!-- Site Makers -->
-      <div class="site-makers">
+      <section class="site-makers">
         <h2>Site Makers</h2>
         <?php if (have_rows('site-makers')):
 
@@ -49,5 +49,5 @@
               <p><span class="maker-role"><?php echo $maker_role ?></span>: <em><?php echo $maker_name ?></em></p>
           <?php endwhile; ?>
         <?php endif ?>
-      </div>
+      </section>
   </div>

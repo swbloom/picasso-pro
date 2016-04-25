@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 ol, ul {
   list-style: none;
@@ -74,13 +75,21 @@ em {
 u {
   text-decoration: underline;
 }
+input, textarea {
+    &::placeholder {
+      color: #000;
+    }
+}
+p {
+  line-height: 1.45em;
+}
 .container {
   width: 80%;
-  @media screen and (max-width: 1200px) {
-    padding: 0 70px;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   padding: 0 70px;
+  // }
   @media screen and (max-width: $screen-sm) {
-    padding: 0 15px;
+    padding: 0 30px;
     width: 100%;
   }
 }

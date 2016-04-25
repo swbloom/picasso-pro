@@ -137,7 +137,7 @@
           <?php } else if ($post_type->name == 'incubator') { ?>
               <a href="./incubator">
           <?php } else { ?>
-              <a href"<?php the_permalink() ?>">
+              <a href="<?php echo the_permalink() ?>">
           <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
@@ -200,7 +200,7 @@
           <?php } else if ($post_type->name == 'incubator') { ?>
               <a href="./incubator">
           <?php } else { ?>
-              <a href"<?php the_permalink() ?>">
+              <a href="<?php the_permalink() ?>">
           <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
@@ -269,7 +269,7 @@
           <?php } else if ($post_type->name == 'incubator') { ?>
               <a href="./incubator">
           <?php } else { ?>
-              <a href"<?php the_permalink() ?>">
+              <a href="<?php the_permalink() ?>">
           <?php } ?>
           <div class="feature-content-image" style="background-image: url('<?php echo $featured_image['url'] ?>')">
           </div>
