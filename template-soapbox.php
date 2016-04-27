@@ -27,10 +27,10 @@
     <div class="content row">
       <div class="main">
         <?php yoast_breadcrumb('<p id="breadcrumbs">','</p>'); ?>
-        <aside class="soapbox-cta">
+        <!-- <aside class="soapbox-cta">
           <h2 class="soapbox-cta-title">Talk to us!</h2>
-          <p>Leave us a comment if you’d like to continue the conversation. Tweet or post to FB with the sharing icons above each post.  <a href="mailto:jacobsonr@sympatico.ca " class="soapbox-cta-link">Send us an email</a> if you would like to be considered as a candidate to have your own post in this space.</p>
-        </aside>
+          <p>Leave us a comment if you’d like to continue the conversation. Tweet or post to FB with the sharing icons above each post.  <a href="mailto:picassoprohub@gmail.com" class="soapbox-cta-link">Send us an email</a> if you would like to be considered as a candidate to have your own post in this space.</p>
+        </aside> -->
         <?php
           $soapboxQuery = new WP_QUERY(
             array(

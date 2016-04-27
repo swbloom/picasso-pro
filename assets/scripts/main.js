@@ -221,6 +221,19 @@ function fixSkiplinks(){
   });
 }
 
+function enlargeSearchInput(){
+  var $mobileSearch = $('.mobile-search');
+  var $searchInputMobile = $('#search-input-mobile');
+
+  $mobileSearch.on('click', function(){
+    $searchInputMobile.css('visibility', 'visible').animate({'width': '200px'});
+  });
+  $searchInputMobile.on('blur', function(){
+      $searchInputMobile.animate({'width': '0px'});
+  })
+
+}
+
 
 $(document).ready(function() {
   sizer.init();
@@ -229,4 +242,5 @@ $(document).ready(function() {
   navActiveState.init();
   queryParamStripper.init();
   fixSkiplinks();
+  enlargeSearchInput();
 });

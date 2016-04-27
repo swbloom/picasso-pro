@@ -1,6 +1,9 @@
+$mobilenav-height: 60px;
+
 .nav-primary {
   @include h4;
   background-color: $brand-primary;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +19,7 @@
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
@@ -30,15 +33,18 @@
     margin: $menu-item-margin;
     border-bottom: $keyline-width solid $brand-primary;
 
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1000px) {
       margin: 15px 0px;
       height: auto; // to fix slidedown overflow bug
+    }
+    @media screen and (min-width: 1000px) {
+      text-align: center;
     }
 
     &.active {
       border-bottom: $keyline-width solid $brand-secondary;
 
-      @media screen and ( max-width: 950px ) {
+      @media screen and ( max-width: 1000px ) {
         border-bottom: 0px;
       }
     }
@@ -80,5 +86,32 @@
   }
   p {
     display: inline-block;
+  }
+}
+.nav-primary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 45px;
+
+  @media screen and (max-width: 1000px) {
+    width: 226px;
+    // top: calc(100% + #{$mobilenav-height});
+    bottom: auto;
+  }
+}
+.menubar-mobile {
+  margin-top: 40px;
+  height: $mobilenav-height;
+  text-transform: uppercase;
+  @media screen and (max-width: $screen-sm) {
+    margin-top: 30px;
+  }
+}
+
+.desktop-hidden--menu {
+  display: none;
+  @media screen and (max-width: 1000px) {
+    display: block;
   }
 }

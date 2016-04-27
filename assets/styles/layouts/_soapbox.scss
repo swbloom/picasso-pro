@@ -21,6 +21,8 @@ $soapbox-wrapper-margin:  45px 0;
   }
   @media screen and ( max-width: 1200px ) {
     height: auto;
+  }
+  @media screen and ( max-width: 767px ) {
     padding-top: 80px;
   }
   &-innerwrapper {
@@ -65,6 +67,9 @@ $soapbox-wrapper-margin:  45px 0;
     color: $brand-primary;
   }
 }
+.soapbox-article {
+  padding-right: 40px;
+}
 .article-title {
   font-weight: bold;
   @include h2;
@@ -107,12 +112,9 @@ $soapbox-wrapper-margin:  45px 0;
   }
 }
 .soapbox-cta {
-  width: 300px;
+  width: 100%;
   padding: 20px;
   min-height: 100px;
-  position: absolute;
-  right: 0;
-  top: 100px;
   background-color:#DEDCDC;
   p {
     line-height: 1.38em;
@@ -140,4 +142,5 @@ $soapbox-wrapper-margin:  45px 0;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.8px;
+  line-height: 1.45em;
 }

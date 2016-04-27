@@ -7,6 +7,10 @@
 }
 .contact-group {
   margin: 20px 0;
+  margin-right: 10px;
+  @media screen and (max-width: $screen-sm) {
+    margin-right: 0px;
+  }
   &-header {
     font-weight: bold;
     @include h3;

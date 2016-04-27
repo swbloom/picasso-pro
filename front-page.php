@@ -61,7 +61,7 @@
             </div>
           </a>
           <div class="home-project-details">
-            <p class="home-project-category">Archive</p>
+            <p class="home-project-category feature-content-category">Archive</p>
             <a href="<?php the_permalink(); ?>" class="home-project-title"><?php the_title(); ?></a>
             <p class="home-project-length">[<?php the_field('video-year') ?>] <?php the_field('video-length') ?></p>
             <div class="home-project-description">
@@ -145,7 +145,7 @@
           <?php echo $post_type->label ; ?>
           </p>
           <p class="feature-content-title"><?php the_title(); ?></p>
-          
+
             <!-- <a download="" href="<?php echo $resource['url'] ?>" class="feature-content-link">Download Resource</a> -->
             <!-- <a href="<?php the_permalink(); ?>" class="feature-content-link">Read More </a> -->
           <?php endif; ?>
@@ -360,4 +360,3 @@
         <?php endif; ?>
         <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
       </div>
-

@@ -1,6 +1,5 @@
 $header-height: 198px;
 $header-height-sm: 146px;
-$mobilenav-height: 60px;
 
 .brand {
   text-decoration: none;
@@ -48,34 +47,4 @@ header .container {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-#search-form {
-  position: absolute;
-  top: 0;
-  right: 0;
-  @media screen and (max-width: $screen-sm) {
-    right: -185px;  
-  }
-}
-
-.nav-primary {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0 45px;
-
-  @media screen and (max-width: 950px) {
-    width: 226px;
-    // top: calc(100% + #{$mobilenav-height});
-    bottom: auto;
-  }
-}
-.menubar-mobile {
-  margin-top: 40px;
-  height: $mobilenav-height;
-  text-transform: uppercase;
-  @media screen and (max-width: $screen-sm) {
-    margin-top: 30px;
-  }
 }

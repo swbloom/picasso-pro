@@ -8,12 +8,14 @@
   }
 }
 #search-input {
+  min-width: 194px;
+}
+#search-input, #search-input-mobile {
   @include p;
   background: transparent;
   border: 0;
   height: 37px;
   letter-spacing: 0.74px;
-  min-width: 194px;
   font-size: 0.9em;
   color: $white;
   &::placeholder {
@@ -34,4 +36,21 @@
   height: 19px;
   position: relative;
   margin-left: 15px;
+}
+#search-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#search-form-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#search-input-mobile {
+  width: 0px;
+  background: none;
+  border: none;
+  visibility: hidden;
+  color: $white;
 }

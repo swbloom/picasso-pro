@@ -131,8 +131,9 @@ p {
 
 // Breakpoint Specific Classes
 .desktop-hidden {
-  @media screen and (min-width: 950px) {
-    display: none;
+  display: none;
+  @media screen and (max-width: $screen-sm) {
+    display: block;
   }
 }
 
@@ -162,4 +163,11 @@ p {
 }
 .fb_iframe_widget span {
   vertical-align: baseline !important;
+}
+
+.mobile-hidden {
+  display: block;
+  @media screen and (max-width: $screen-sm) {
+    display: none;
+  }
 }

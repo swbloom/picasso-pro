@@ -1,4 +1,28 @@
+$gutter: 20px;
+
 .container {
   max-width: $max-width;
   margin: 0 auto;
+}
+.grid {
+  &:after {
+    content: " ";
+    clear: both;
+    display: block;
+  }
+}
+.col {
+  float: left;
+}
+.col-three-quarters {
+  width: calc(75% - #{$gutter});
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+}
+.col-one-quarter {
+  width: calc(25% - #{$gutter});
+  @media screen and (max-width: $screen-sm) {
+    width: 100%;
+  }
 }

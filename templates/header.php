@@ -16,7 +16,7 @@
       </div>
       <!-- </a> -->
   </div>
-  <div class="desktop-hidden">
+  <div class="desktop-hidden--menu">
     <div class="menubar-mobile">
       <button id="toggle-nav"><i class="fa fa-bars"></i>
       <p>Menu</p>
@@ -32,4 +32,3 @@
   </nav>
   <?php get_theme_mod('picassopro_searchbar') ? get_search_form() : null ?>
 </header>
-

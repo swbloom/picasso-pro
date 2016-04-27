@@ -17,6 +17,7 @@ $footer-height-sm: 146px;
   @media screen and (max-width: $screen-sm) {
     height: $footer-height-sm;
     align-items: flex-start;
+    padding: 0;
   }
 
   .container {
